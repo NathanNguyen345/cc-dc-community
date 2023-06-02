@@ -1,0 +1,12 @@
+/* Button with a gradient color */
+.button {
+  background: linear-gradient(90deg, #F1B955 0%, #DA6077 100%);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}

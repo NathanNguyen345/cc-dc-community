@@ -1,0 +1,43 @@
+.container{
+    padding: 100px;
+    margin: 100px;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 300px 100px 100px;
+    align-items: center;
+    text-align: left;
+    grid-template-areas:
+        "title title img"
+        "desc desc img"
+        "emptyLeft button emptyRight"
+
+}
+
+.title{
+    grid-area: title;
+    
+}
+
+.desc{
+    grid-area: desc;
+}
+
+.desc p{
+    font-size: 20px;
+}
+
+.button{
+    grid-area: button;
+}
+
+.splashImg{
+    grid-area: img;
+}
+
+.splashImg img {
+    width: 500px;
+    height: 500px;
+}
