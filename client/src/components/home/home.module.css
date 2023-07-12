@@ -1,18 +1,48 @@
+/*****************************************************
+                HOMEPAGE GLOBAL STYLES  
+*****************************************************/
 .container{
-    padding: 100px;
-    margin: 100px;
+    margin: 0px 100px 0px 100px;
+    padding: 0px 100px 0px 100px;
+    background-color: #6348E0;
 }
 
-.gridContainer{
+span{
+    color: #FFC55A;
+}
+
+p{
+    font-size: 24px;
+}
+
+.centerDiv{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+img{
+    width: 350px;
+    height: 350px;
+}
+
+h4{
+    font-size: 50px;
+}
+
+
+/*****************************************************
+                SPLASH STYLES
+*****************************************************/
+.splashGridContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 300px 100px 100px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
     text-align: left;
     grid-template-areas:
         "title title img"
         "desc desc img"
-        "emptyLeft button emptyRight"
+        "button button img"
 
 }
 
@@ -25,10 +55,6 @@
     grid-area: desc;
 }
 
-.desc p{
-    font-size: 20px;
-}
-
 .button{
     grid-area: button;
 }
@@ -37,7 +63,94 @@
     grid-area: img;
 }
 
-.splashImg img {
-    width: 500px;
-    height: 500px;
+
+
+/*****************************************************
+                SPOTLIGHT STYLE
+*****************************************************/
+.spotlightGridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    text-align: left;
+    grid-template-areas:
+        "img title title"
+        "img desc desc"
+        "img button button"
 }
+
+.spotlightTitle{
+    grid-area: title;
+}
+
+.spotlightDesc{
+    grid-area: desc;
+}
+
+.spotlightButton{
+    grid-area: button;
+}
+
+.spotlightImg{
+    grid-area: img;
+}
+
+
+/*****************************************************
+                KEY FEATURES STYLES
+*****************************************************/
+.keyfeatureGridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    text-align: left;
+    grid-template-areas:
+        "title title title"
+        "key1 key2 key3"
+}
+
+.keyfeatureTitle{
+    grid-area: title;
+    text-align: center;
+}
+
+.key1{
+    grid-area: key1;
+}
+
+.key2{
+    grid-area: key2;
+}
+
+.key3{
+    grid-area: key3;
+}
+
+
+
+/*****************************************************
+                ABOUT STYLES
+*****************************************************/
+.aboutGridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    text-align: left;
+    grid-template-areas:
+        "title title img"
+        "desc desc img"
+}
+
+.aboutTitle{
+    grid-area: title;
+}
+
+.aboutDesc{
+    grid-area: desc;
+}
+
+.aboutImg{
+    grid-area: img;
+}
+
+
