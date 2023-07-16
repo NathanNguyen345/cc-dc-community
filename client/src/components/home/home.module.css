@@ -2,15 +2,23 @@
                 HOMEPAGE GLOBAL STYLES  
 *****************************************************/
 .container{
+    width: 100vw;
+    position: relative;
     color: white;
 }
+
+.containerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
 
 span{
     color: #FFC55A;
 }
 
 p{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .centerDiv{
@@ -19,9 +27,10 @@ p{
 }
 
 h4{
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
 img{
@@ -49,7 +58,7 @@ img{
     height: 100vh;
     width: 100%;
     position: absolute;
-    top: 100vh;
+    bottom: 0;
     left: 0;
     z-index: -1;
 }
@@ -58,10 +67,11 @@ img{
 *****************************************************/
 .splashGridContainer{
     padding: 50px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto auto;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     grid-template-areas:
         "section img"
@@ -77,6 +87,7 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: img;
+    margin-left: 100px;
 }
 
 
@@ -86,10 +97,11 @@ img{
 *****************************************************/
 .spotlightContainer{
     padding: 50px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto auto;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     grid-template-areas:
         "img section"
@@ -99,6 +111,7 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: section;
+    padding: 10px;
 }
 
 .buttonRight{
@@ -109,6 +122,7 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: img;
+    margin-right: 100px;
 }
 
 
@@ -118,16 +132,17 @@ img{
 *****************************************************/
 .keyfeatureGridContainer{
     padding: 50px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     grid-template-areas:
         "title title title"
         "key1 key2 key3";
-    /* background-color: #1473E6; */
     text-align: center;
+    align-items: stretch;
 }
 
 .keyfeatureTitle{
@@ -159,10 +174,11 @@ img{
 *****************************************************/
 .aboutGridContainer{
     padding: 50px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto auto;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     grid-template-areas:
         "section img"
@@ -179,6 +195,7 @@ img{
     flex-direction: column;
     grid-area: img;
     transform: scaleX(-1);
+    margin-left: 100px;
 }
 
 
@@ -201,10 +218,6 @@ img{
                 MEDIA QUERIES 
 *****************************************************/
 @media (min-width: 576px) {
-    .container{
-        padding: 0px 10vw;
-    }
-
     h4{
         font-size: 20px;
         margin-top: 10px;
@@ -213,10 +226,6 @@ img{
   }
   
 @media (min-width: 768px) {
-    .container{
-        padding: 0px 15vw;
-    }
-
     h4{
         font-size: 30px;
         margin-top: 10px;
@@ -225,10 +234,6 @@ img{
   }
 
 @media (min-width: 992px) {
-    .container{
-        padding: 0px 20vw;
-    }
-
     h4{
         font-size: 40px;
         margin-top: 10px;
@@ -238,14 +243,9 @@ img{
   }
 
   @media (min-width: 1200px) {
-    .container{
-        padding: 0px 25vw;
-    }
-
     h4{
         font-size: 50px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
   }
-  
