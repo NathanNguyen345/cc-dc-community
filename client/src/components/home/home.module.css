@@ -2,9 +2,7 @@
                 HOMEPAGE GLOBAL STYLES  
 *****************************************************/
 .container{
-    margin: 0px 100px 0px 100px;
-    padding: 0px 100px 0px 100px;
-    background-color: #6348E0;
+    color: white;
 }
 
 span{
@@ -17,8 +15,13 @@ p{
 
 .centerDiv{
     margin: auto;
-    width: 50%;
     padding: 10px;
+}
+
+h4{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 img{
@@ -26,40 +29,53 @@ img{
     height: 350px;
 }
 
-h4{
-    font-size: 50px;
+/*****************************************************
+                WAVE STYLES  
+*****************************************************/
+.svgTop{
+    background-image: url("../../assets/images/topWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-
+.svgBottom{
+    background-image: url("../../assets/images/bottomWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    z-index: -1;
+}
 /*****************************************************
                 SPLASH STYLES
 *****************************************************/
 .splashGridContainer{
+    padding: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
     align-items: flex-start;
     text-align: left;
     grid-template-areas:
-        "title title img"
-        "desc desc img"
-        "button button img"
-
+        "section img"
 }
 
-.title{
-    grid-area: title;
-    
+.splashSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
 }
 
-.desc{
-    grid-area: desc;
-}
-
-.button{
-    grid-area: button;
-}
-
-.splashImg{
+.splashImgFlex{
+    display: flex;
+    flex-direction: column;
     grid-area: img;
 }
 
@@ -68,62 +84,72 @@ h4{
 /*****************************************************
                 SPOTLIGHT STYLE
 *****************************************************/
-.spotlightGridContainer{
+.spotlightContainer{
+    padding: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
     align-items: flex-start;
     text-align: left;
     grid-template-areas:
-        "img title title"
-        "img desc desc"
-        "img button button"
+        "img section"
 }
 
-.spotlightTitle{
-    grid-area: title;
+.spotlightSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
 }
 
-.spotlightDesc{
-    grid-area: desc;
+.buttonRight{
+    margin-left: auto;
 }
 
-.spotlightButton{
-    grid-area: button;
-}
-
-.spotlightImg{
+.spotlightImgFlex{
+    display: flex;
+    flex-direction: column;
     grid-area: img;
 }
+
 
 
 /*****************************************************
                 KEY FEATURES STYLES
 *****************************************************/
 .keyfeatureGridContainer{
+    padding: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     align-items: flex-start;
     text-align: left;
     grid-template-areas:
         "title title title"
-        "key1 key2 key3"
+        "key1 key2 key3";
+    /* background-color: #1473E6; */
+    text-align: center;
 }
 
 .keyfeatureTitle{
     grid-area: title;
     text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .key1{
     grid-area: key1;
+    padding: 0px 35px;
 }
 
 .key2{
     grid-area: key2;
+    padding: 0px 35px;
 }
 
 .key3{
     grid-area: key3;
+    padding: 0px 35px;
 }
 
 
@@ -132,25 +158,94 @@ h4{
                 ABOUT STYLES
 *****************************************************/
 .aboutGridContainer{
+    padding: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
     align-items: flex-start;
     text-align: left;
     grid-template-areas:
-        "title title img"
-        "desc desc img"
+        "section img"
 }
 
-.aboutTitle{
-    grid-area: title;
+.aboutSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
 }
 
-.aboutDesc{
-    grid-area: desc;
-}
-
-.aboutImg{
+.aboutImgFlex{
+    display: flex;
+    flex-direction: column;
     grid-area: img;
+    transform: scaleX(-1);
 }
 
 
+
+/*****************************************************
+                CONTACT STYLES
+*****************************************************/
+.contactGridContainer{
+    padding: 50px;
+}
+
+.contactTitle{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+/*****************************************************
+                MEDIA QUERIES 
+*****************************************************/
+@media (min-width: 576px) {
+    .container{
+        padding: 0px 10vw;
+    }
+
+    h4{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }
+  
+@media (min-width: 768px) {
+    .container{
+        padding: 0px 15vw;
+    }
+
+    h4{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }
+
+@media (min-width: 992px) {
+    .container{
+        padding: 0px 20vw;
+    }
+
+    h4{
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+    .container{
+        padding: 0px 25vw;
+    }
+
+    h4{
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }
+  
