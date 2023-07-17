@@ -6,20 +6,29 @@ import spotlghtImg from "../../assets/images/spotlightImg.png";
 import aboutImg from "../../assets/images/aboutImg.png";
 import Button from "../button/Button";
 import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const Homepage = () => {
+  const [divRef, isInView] = useIntersectionObserver();
+  const [divRef2, isInView2] = useIntersectionObserver();
+
   return (
     <div className={styles.container}>
       <div className={styles.svgTop}></div>
-
       <div className={styles.containerInner}>
         {/* 
       ********************************************************************************
                                         Splash Section                              
       ********************************************************************************
       */}
-        <div className={styles.splashGridContainer}>
-          <div className={styles.splashSectionFlex}>
+        <div className={styles.splashGridContainer} ref={divRef}>
+          <div
+            className={
+              isInView
+                ? `${styles.splashSectionFlexEnter}`
+                : `${styles.splashSectionFlex}`
+            }
+          >
             <div className={styles.title}>
               <h4>
                 <span>Empowering Success:</span> Unleash Your ACS/DC Potential
@@ -39,7 +48,13 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className={styles.splashImgFlex}>
+          <div
+            className={
+              isInView
+                ? `${styles.splashImgFlexEnter}`
+                : `${styles.splashImgFlex}`
+            }
+          >
             <div className={`${styles.centerDiv}`}>
               <img src={splashImg} alt="splashImg" />
             </div>
@@ -50,8 +65,26 @@ const Homepage = () => {
                                         Spotlight Section
       ********************************************************************************
       */}
-        <div className={styles.spotlightContainer}>
-          <div className={styles.spotlightSectionFlex}>
+        <div className={styles.spotlightContainer} ref={divRef2}>
+          <div
+            className={
+              isInView2
+                ? `${styles.spotlightImgFlexEnter}`
+                : `${styles.spotlightImgFlex}`
+            }
+          >
+            <div className={`${styles.centerDiv}`}>
+              <img src={spotlghtImg} alt="spotlightImg" />
+            </div>
+          </div>
+
+          <div
+            className={
+              isInView2
+                ? `${styles.spotlightSectionFlexEnter}`
+                : `${styles.spotlightSectionFlex}`
+            }
+          >
             <div className={styles.spotlightTitle}>
               <h4>
                 Unleash Our Versatile <span>API</span> Anywhere, Anytime!
@@ -67,12 +100,6 @@ const Homepage = () => {
             </div>
             <div className={styles.buttonRight}>
               <Button text="Click to get started" />
-            </div>
-          </div>
-
-          <div className={styles.spotlightImgFlex}>
-            <div className={`${styles.centerDiv}`}>
-              <img src={spotlghtImg} alt="spotlightImg" />
             </div>
           </div>
         </div>
@@ -166,7 +193,5 @@ const Homepage = () => {
     </div>
   );
 };
-
-/** Test comment for commit */
 
 export default Homepage;

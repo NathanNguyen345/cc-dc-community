@@ -33,6 +33,10 @@ h4{
     text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
+p{
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);;
+}
+
 img{
     width: 350px;
     height: 350px;
@@ -74,13 +78,15 @@ img{
     align-items: center;
     text-align: left;
     grid-template-areas:
-        "section img"
+        "section img";
 }
 
 .splashSectionFlex{
     display: flex;
     flex-direction: column;
     grid-area: section;
+    transform: translateX(-200px);
+    opacity: 0;
 }
 
 .splashImgFlex{
@@ -88,6 +94,27 @@ img{
     flex-direction: column;
     grid-area: img;
     margin-left: 100px;
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.splashSectionFlexEnter{    
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.splashImgFlexEnter{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    margin-left: 100px;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }
 
 
@@ -107,15 +134,16 @@ img{
         "img section"
 }
 
+.buttonRight{
+    margin-left: auto;
+}
+
 .spotlightSectionFlex{
     display: flex;
     flex-direction: column;
     grid-area: section;
-    padding: 10px;
-}
-
-.buttonRight{
-    margin-left: auto;
+    transform: translateX(200px);
+    opacity: 0;
 }
 
 .spotlightImgFlex{
@@ -123,6 +151,27 @@ img{
     flex-direction: column;
     grid-area: img;
     margin-right: 100px;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.spotlightSectionFlexEnter{    
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.25s ease-in-out;
+}
+
+.spotlightImgFlexEnter{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    margin-right: 100px;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.25s ease-in-out;
 }
 
 
