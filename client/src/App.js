@@ -1,4 +1,5 @@
 import "./App.css";
+import Homepage from "./components/home/Homepage";
 import Navbar from "./components/nav/Navbar";
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
           href="https://use.typekit.net/xpf5njd.css"
         ></link>
       </header>
-      <div className="paddingContainer">
-        <Navbar />
+      <div className="container">
+        {/* <Navbar /> */}
+        <Homepage />
       </div>
     </div>
   );

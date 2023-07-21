@@ -3,13 +3,13 @@
 <svg version="1.1" id="visual" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#1473E6;}
+	.st0{fill:none;}
 	.st1{fill:#964B00;}
 	.st2{fill:#A55200;}
 	.st3{fill:#B55A00;}
 	.st4{fill:#C46200;}
 </style>
-<rect class="st0" width="1920" height="1071.3"/>
+<rect class="st0" width="1920" height="1080"/>
 <path class="st1" d="M0,535l53.3-14.5C106.7,506,213.3,477,320,447s213.3-61,320-96.5s213.3-75.5,320-55.7
 	c106.7,19.9,213.3,99.5,320,112.5s213.3-40.6,320-38.6s213.3,59.6,266.7,88.5L1920,486v595h-53.3c-53.4,0-160,0-266.7,0
 	s-213.3,0-320,0s-213.3,0-320,0s-213.3,0-320,0s-213.3,0-320,0s-213.3,0-266.7,0H0V535z"/>

@@ -2,44 +2,44 @@
                 HOMEPAGE GLOBAL STYLES  
 *****************************************************/
 .container{
-    width: 100vw;
     position: relative;
     color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
 
-.containerInner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
 
 span{
     color: #FFC55A;
 }
 
-p{
-    font-size: 20px;
-}
-
-.centerDiv{
-    margin: auto;
-    padding: 10px;
-}
-
-h4{
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+h1{
+    font-size: 2.5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
 p{
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);;
+    font-size: 1.25rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
+
 img{
-    width: 350px;
-    height: 350px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 /*****************************************************
@@ -69,16 +69,15 @@ img{
 /*****************************************************
                 SPLASH STYLES
 *****************************************************/
-.splashGridContainer{
-    padding: 50px;
+.splashContainer{
     margin-bottom: 100px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1.25fr 1fr;
     align-items: center;
     text-align: left;
     grid-template-areas:
         "section img";
+
 }
 
 .splashSectionFlex{
@@ -93,12 +92,11 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: img;
-    margin-left: 100px;
     transform: translateX(200px);
     opacity: 0;
 }
 
-.splashSectionFlexEnter{    
+.sectionFlexEnter{
     display: flex;
     flex-direction: column;
     grid-area: section;
@@ -107,11 +105,10 @@ img{
     transition: all 1s ease-in-out;
 }
 
-.splashImgFlexEnter{
+.sectionImgFlexEnter{
     display: flex;
     flex-direction: column;
     grid-area: img;
-    margin-left: 100px;
     transform: translateX(0);
     opacity: 1;
     transition: all 1s ease-in-out;
@@ -123,10 +120,9 @@ img{
                 SPOTLIGHT STYLE
 *****************************************************/
 .spotlightContainer{
-    padding: 50px;
     margin-bottom: 100px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.25fr;
     grid-template-rows: auto auto auto;
     align-items: center;
     text-align: left;
@@ -150,28 +146,8 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: img;
-    margin-right: 100px;
     transform: translateX(-200px);
     opacity: 0;
-}
-
-.spotlightSectionFlexEnter{    
-    display: flex;
-    flex-direction: column;
-    grid-area: section;
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 1.25s ease-in-out;
-}
-
-.spotlightImgFlexEnter{
-    display: flex;
-    flex-direction: column;
-    grid-area: img;
-    margin-right: 100px;
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 1.25s ease-in-out;
 }
 
 
@@ -179,54 +155,57 @@ img{
 /*****************************************************
                 KEY FEATURES STYLES
 *****************************************************/
-.keyfeatureGridContainer{
-    padding: 50px;
+.keyfeatureContainer{
     margin-bottom: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: left;
-    grid-template-areas:
-        "title title title"
-        "key1 key2 key3";
-    text-align: center;
-    align-items: stretch;
+}
+
+.keyfeatureContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.keyTitle{
+    margin-bottom: 20px;
 }
 
 .keyfeatureTitle{
-    grid-area: title;
     text-align: center;
-    width: 100%;
-    margin-bottom: 50px;
+    opacity: 0;
 }
 
-.key1{
+.keyfeatureTitleEnter{
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.item{
+    flex: 1;
     grid-area: key1;
-    padding: 0px 35px;
+    transform: translateY(75px);
+    opacity: 0;
 }
 
-.key2{
-    grid-area: key2;
-    padding: 0px 35px;
+.itemEnter{
+    flex: 1;
+    grid-area: key1;
+    transform: translateY(0px);
+    transition: all 1s ease-in-out;
+    opacity: 1;
 }
-
-.key3{
-    grid-area: key3;
-    padding: 0px 35px;
-}
-
 
 
 /*****************************************************
                 ABOUT STYLES
 *****************************************************/
-.aboutGridContainer{
-    padding: 50px;
-    margin-bottom: 100px;
+.aboutContainer{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1.25fr 1fr;
     align-items: center;
     text-align: left;
     grid-template-areas:
@@ -237,6 +216,8 @@ img{
     display: flex;
     flex-direction: column;
     grid-area: section;
+    transform: translateX(-200px);
+    opacity: 1;
 }
 
 .aboutImgFlex{
@@ -244,21 +225,31 @@ img{
     flex-direction: column;
     grid-area: img;
     transform: scaleX(-1);
-    margin-left: 100px;
+    transform: translateX(200px);
+    opacity: 0;
 }
-
-
 
 /*****************************************************
                 CONTACT STYLES
 *****************************************************/
-.contactGridContainer{
+.contactContainer{
     padding: 50px;
 }
 
-.contactTitle{
+.contactFlex{
     text-align: center;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.contactFlexEnter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0px);
+    transition: all 1s ease-in-out;
+    opacity: 1;
 }
 
 
@@ -266,35 +257,110 @@ img{
 /*****************************************************
                 MEDIA QUERIES 
 *****************************************************/
-@media (min-width: 576px) {
-    h4{
-        font-size: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+@media (max-width: 767px) {
+    .content{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: .75rem;
+    }
+    img{
+        display: none;
+    }
+
+    img{
+        visibility: hidden;
+    }
+
+    .splashContainer{
+        display: block;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .spotlightContainer{
+        display: block;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .buttonRight{
+        margin: 0;
+    }
+
+    .keyfeatureContainer{
+        display: block;
+        margin: 75;
+    }
+
+    .keyfeatureContent{
+        flex-direction: column;
+    }
+
+    .aboutContainer{
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .contactContainer{
+        padding: 0;
+        display: block;
     }
   }
   
-@media (min-width: 768px) {
-    h4{
-        font-size: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    img{
+        max-width: 250px;
+        max-height: 250px;
     }
   }
 
-@media (min-width: 992px) {
-    h4{
-        font-size: 40px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .content{
+        width: 70%;
     }
 
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
   }
 
-  @media (min-width: 1200px) {
-    h4{
-        font-size: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+@media (min-width: 1280px) and (max-width: 1619px) {
+    .content{
+        width: 60%;
+    }
+  }
+
+  @media (min-width: 1620px){
+    .content{
+        width: 50%;
     }
   }

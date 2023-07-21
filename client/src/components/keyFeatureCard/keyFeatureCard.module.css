@@ -6,22 +6,23 @@
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 50px 0px;
     box-sizing: border-box;
     background-color: transparent;
-    border-radius: 25px;
+    border-radius: 15px;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease-in-out;
-    padding: 35px;
     background-color: #D35473;
+    font-size: 16px;
 }
 
 .title{
     width: 100%;
-    font-size: 16pxpx;
     color: #FFC55A;
-    margin: 0;
-    padding: 0;
+}
+
+.keyfeatureTitle{
+    font-size: 1.5rem;
 }
 
 .desc{
@@ -33,4 +34,22 @@
 
 .img{
     fill: white;
+}
+
+@media (max-width: 767px) {
+
+  }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .keyfeatureTitle{
+        font-size: 1rem;
+    }
+
+    .desc{
+        font-size: .6rem;
+    }
+
+    .flexboxContainer{
+        padding: 15px 15px;
+    }
 }

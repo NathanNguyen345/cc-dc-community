@@ -15,7 +15,7 @@ const KeyFeatureCard = ({ title, desc, img }) => {
     <div className={styles.flexboxContainer}>
       <div className={styles.img}>{imgMap[img]}</div>
       <div className={styles.title}>
-        <h1>{title}</h1>
+        <h1 className={styles.keyfeatureTitle}>{title}</h1>
       </div>
       <div className={styles.desc}>{desc}</div>
     </div>

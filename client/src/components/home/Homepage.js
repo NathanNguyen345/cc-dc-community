@@ -11,29 +11,28 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 const Homepage = () => {
   const [divRef, isInView] = useIntersectionObserver();
   const [divRef2, isInView2] = useIntersectionObserver();
+  const [divRef3, isInView3] = useIntersectionObserver();
+  const [divRef4, isInView4] = useIntersectionObserver();
+  const [divRef5, isInView5] = useIntersectionObserver();
 
   return (
     <div className={styles.container}>
       <div className={styles.svgTop}></div>
-      <div className={styles.containerInner}>
-        {/* 
-      ********************************************************************************
-                                        Splash Section                              
-      ********************************************************************************
-      */}
-        <div className={styles.splashGridContainer} ref={divRef}>
+
+      <div className={styles.content}>
+        <div className={styles.splashContainer} ref={divRef}>
           <div
             className={
               isInView
-                ? `${styles.splashSectionFlexEnter}`
+                ? `${styles.sectionFlexEnter}`
                 : `${styles.splashSectionFlex}`
             }
           >
             <div className={styles.title}>
-              <h4>
+              <h1>
                 <span>Empowering Success:</span> Unleash Your ACS/DC Potential
                 with Our All-in-One Solution
-              </h4>
+              </h1>
             </div>
             <div className={styles.desc}>
               <p>
@@ -51,29 +50,25 @@ const Homepage = () => {
           <div
             className={
               isInView
-                ? `${styles.splashImgFlexEnter}`
+                ? `${styles.sectionImgFlexEnter}`
                 : `${styles.splashImgFlex}`
             }
           >
-            <div className={`${styles.centerDiv}`}>
+            <div>
               <img src={splashImg} alt="splashImg" />
             </div>
           </div>
         </div>
-        {/*
-      ********************************************************************************
-                                        Spotlight Section
-      ********************************************************************************
-      */}
+
         <div className={styles.spotlightContainer} ref={divRef2}>
           <div
             className={
               isInView2
-                ? `${styles.spotlightImgFlexEnter}`
+                ? `${styles.sectionImgFlexEnter}`
                 : `${styles.spotlightImgFlex}`
             }
           >
-            <div className={`${styles.centerDiv}`}>
+            <div>
               <img src={spotlghtImg} alt="spotlightImg" />
             </div>
           </div>
@@ -81,14 +76,14 @@ const Homepage = () => {
           <div
             className={
               isInView2
-                ? `${styles.spotlightSectionFlexEnter}`
+                ? `${styles.sectionFlexEnter}`
                 : `${styles.spotlightSectionFlex}`
             }
           >
             <div className={styles.spotlightTitle}>
-              <h4>
+              <h1>
                 Unleash Our Versatile <span>API</span> Anywhere, Anytime!
-              </h4>
+              </h1>
             </div>
             <div className={styles.spotlightDesc}>
               <p>
@@ -103,26 +98,34 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        {/*
-      ********************************************************************************
-                                        Key Feature Section   
-      ********************************************************************************
-      */}
-        <div className={styles.middeDiv}>
-          <div className={styles.keyfeatureGridContainer}>
-            <div className={`${styles.keyfeatureTitle} ${styles.centerDiv}`}>
-              <h4>
+
+        <div className={styles.keyfeatureContainer} ref={divRef3}>
+          <div
+            className={
+              isInView3
+                ? `${styles.keyfeatureTitleEnter}`
+                : `${styles.keyfeatureTitle}`
+            }
+          >
+            <div className={styles.keyTitle}>
+              <h1>
                 Transforming Ideas into Powerful <span>Solutions</span>
-              </h4>
+              </h1>
             </div>
-            <div className={styles.key1}>
+          </div>
+          <div className={styles.keyfeatureContent}>
+            <div
+              className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
+            >
               <KeyFeatureCard
                 title={"Integrations"}
                 desc={"Document Cloud integrations to accelerate deployment."}
                 img={"gear"}
               />
             </div>
-            <div className={styles.key2}>
+            <div
+              className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
+            >
               <KeyFeatureCard
                 title={"Sample"}
                 desc={
@@ -131,7 +134,9 @@ const Homepage = () => {
                 img={"file"}
               />
             </div>
-            <div className={styles.key3}>
+            <div
+              className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
+            >
               <KeyFeatureCard
                 title={"Tool"}
                 desc={
@@ -142,17 +147,19 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        {/*
-      ********************************************************************************
-                                        About Section
-      ********************************************************************************
-      */}
-        <div className={styles.aboutGridContainer}>
-          <div className={styles.aboutSectionFlex}>
+
+        <div className={styles.aboutContainer} ref={divRef4}>
+          <div
+            className={
+              isInView4
+                ? `${styles.sectionFlexEnter}`
+                : `${styles.aboutSectionFlex}`
+            }
+          >
             <div className={styles.aboutTitle}>
-              <h4>
+              <h1>
                 Meet the <span>Visionaries</span> Empowering this Transformation
-              </h4>
+              </h1>
             </div>
             <div className={styles.aboutDesc}>
               <p>
@@ -166,29 +173,35 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className={styles.aboutImgFlex}>
+          <div
+            className={
+              isInView4
+                ? `${styles.sectionImgFlexEnter}`
+                : `${styles.aboutImgFlex}`
+            }
+          >
             <div className={`${styles.centerDiv}`}>
               <img src={aboutImg} alt="aboutImg" />
             </div>
           </div>
         </div>
-        {/*
-      ********************************************************************************
-                                        Contact Section
-      ********************************************************************************
-      */}
-        <div className={styles.contactGridContainer}>
-          <div className={styles.contactTitle}>
-            <h4>
-              Have Questions? <span>Contact</span> Us for Expert Assistance!
-            </h4>
-          </div>
 
-          <div className={styles.contactButton}>
-            <Button text="Contact Us" />
+        <div className={styles.contactContainer} ref={divRef5}>
+          <div
+            className={
+              isInView5 ? `${styles.contactFlexEnter}` : `${styles.contactFlex}`
+            }
+          >
+            <h1>
+              Have Questions? <span>Contact</span> Us for Expert Assistance!
+            </h1>
+            <div className={styles.contactButton}>
+              <Button text="Contact Us" />
+            </div>
           </div>
         </div>
       </div>
+
       <div className={styles.svgBottom}></div>
     </div>
   );
