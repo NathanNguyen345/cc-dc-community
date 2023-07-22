@@ -12,8 +12,7 @@ function App() {
         ></link>
       </header>
       <div className="container">
-        {/* <Navbar /> */}
-        <Homepage />
+        <Navbar />
       </div>
     </div>
   );

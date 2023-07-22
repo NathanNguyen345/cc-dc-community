@@ -10,6 +10,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
+    padding-top: 100px;
 }
 
 .content{
@@ -53,7 +54,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 .svgBottom{
@@ -64,7 +65,7 @@ img{
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 /*****************************************************
                 SPLASH STYLES
@@ -274,7 +275,7 @@ img{
     }
 
     img{
-        visibility: hidden;
+        visibility: visible;
     }
 
     .splashContainer{
