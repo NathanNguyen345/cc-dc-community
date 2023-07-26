@@ -1,18 +1,25 @@
+:root {
+    --backgroundColorDefault: #D35473;
+    --backgroundColorWhite: #fcfcfc;
+    --descColorDefault: white;
+    --descColorBlack: #343434;
+}
+
 .flexboxContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    padding: 50px 0px;
+    padding: 50px 25px;
     box-sizing: border-box;
     background-color: transparent;
     border-radius: 15px;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease-in-out;
-    background-color: #D35473;
+    background-color: var(--backgroundColor);
     font-size: 16px;
 }
 
@@ -27,13 +34,13 @@
 
 .desc{
     font-size: 14px;
-    color: white;
+    color: var(--descColor);
     margin: 0;
     padding: 0;
 }
 
 .img{
-    fill: white;
+    fill: var(--descColor)
 }
 
 @media (max-width: 767px) {

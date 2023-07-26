@@ -4,12 +4,16 @@ import FileSVG from "../../assets/icons/FileSVG";
 import GearSVG from "../../assets/icons/GearSVG";
 import ToolSVG from "../../assets/icons/ToolSVG";
 
-const KeyFeatureCard = ({ title, desc, img }) => {
+const KeyFeatureCard = ({ title, desc, img, color }) => {
   const imgMap = {
     file: <FileSVG />,
     gear: <GearSVG />,
     tool: <ToolSVG />,
   };
+
+  const root = document.documentElement;
+  root.style.setProperty("--backgroundColor", `var(--backgroundColor${color})`);
+  root.style.setProperty("--descColor", `var(--descColor${color})`);
 
   return (
     <div className={styles.flexboxContainer}>

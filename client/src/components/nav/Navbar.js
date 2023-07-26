@@ -4,6 +4,7 @@ import Homepage from "../home/Homepage";
 import styles from "./nav.module.css";
 import navButton from "../../assets/icons/navButton.png";
 import navCross from "../../assets/icons/navCross.png";
+import FeaturePage from "../features/FeaturePage";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -90,6 +91,14 @@ const Navbar = () => {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route
+          path="/integrations"
+          element={<FeaturePage color="Integrations" />}
+        />
+        <Route path="/samples" element={<FeaturePage color="Samples" />} />
+        <Route path="/tools" element={<FeaturePage color="Tools" />} />
+        <Route path="/search" element={<FeaturePage color="Search" />} />
+        <Route path="/Contact" element={<FeaturePage color="Contact" />} />
       </Routes>
     </Router>
   );

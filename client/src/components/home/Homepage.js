@@ -16,10 +16,10 @@ const Homepage = () => {
   const [divRef5, isInView5] = useIntersectionObserver();
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.svgTop}></div>
 
-      <div className={styles.content}>
+      <div className="content">
         <div className={styles.splashContainer} ref={divRef}>
           <div
             className={
@@ -121,6 +121,7 @@ const Homepage = () => {
                 title={"Integrations"}
                 desc={"Document Cloud integrations to accelerate deployment."}
                 img={"gear"}
+                color={"Default"}
               />
             </div>
             <div
@@ -132,6 +133,7 @@ const Homepage = () => {
                   "Collection of Document Cloud code samples, examples, and templates"
                 }
                 img={"file"}
+                color={"Default"}
               />
             </div>
             <div
@@ -143,6 +145,7 @@ const Homepage = () => {
                   "A set of tools for Document Cloud to make developer lives easier"
                 }
                 img={"tool"}
+                color={"Default"}
               />
             </div>
           </div>
