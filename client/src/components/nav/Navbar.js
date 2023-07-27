@@ -93,10 +93,16 @@ const Navbar = () => {
         <Route path="/" element={<Homepage />} />
         <Route
           path="/integrations"
-          element={<FeaturePage color="Integrations" />}
+          element={<FeaturePage color="Integrations" type="integrations" />}
         />
-        <Route path="/samples" element={<FeaturePage color="Samples" />} />
-        <Route path="/tools" element={<FeaturePage color="Tools" />} />
+        <Route
+          path="/samples"
+          element={<FeaturePage color="Samples" type="samples" />}
+        />
+        <Route
+          path="/tools"
+          element={<FeaturePage color="Tools" type="tools" />}
+        />
         <Route path="/search" element={<FeaturePage color="Search" />} />
         <Route path="/Contact" element={<FeaturePage color="Contact" />} />
       </Routes>

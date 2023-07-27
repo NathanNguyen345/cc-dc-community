@@ -1,5 +1,5 @@
 // create a functional component called Homepage
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./home.module.css";
 import splashImg from "../../assets/images/splashImg.png";
 import spotlghtImg from "../../assets/images/spotlightImg.png";
@@ -7,6 +7,7 @@ import aboutImg from "../../assets/images/aboutImg.png";
 import Button from "../button/Button";
 import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { useLocation } from "react-router-dom";
 
 const Homepage = () => {
   const [divRef, isInView] = useIntersectionObserver();
@@ -14,6 +15,11 @@ const Homepage = () => {
   const [divRef3, isInView3] = useIntersectionObserver();
   const [divRef4, isInView4] = useIntersectionObserver();
   const [divRef5, isInView5] = useIntersectionObserver();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="container">

@@ -1,16 +1,45 @@
 // Create react component for feature page
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./featurePage.module.css";
 import Button from "../button/Button";
 import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import FeatureHighlights from "./FeatureHighlights";
+import { useLocation } from "react-router-dom";
 
-const FeaturePage = ({ color }) => {
+const FeaturePage = ({ color, type }) => {
   const root = document.documentElement;
+  const [dynamicContent, setDynamicContent] = useState(null);
+  const location = useLocation();
 
-  root.style.setProperty("--pageColor", `var(--pageColor${color})`);
-  root.style.setProperty("--sectionColor", `var(--sectionColor${color})`);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    root.style.setProperty("--pageColor", `var(--pageColor${color})`);
+    root.style.setProperty("--sectionColor", `var(--sectionColor${color})`);
+  }, [location]);
+
+  useEffect(() => {
+    const getData = () => {
+      try {
+        fetch(`http://localhost:3000/data/pages/${type}PageData.json`)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            setDynamicContent(data);
+          });
+      } catch (err) {
+        alert("Error loading page, Please contact us for assistance.");
+      }
+    };
+
+    getData();
+  }, [type]);
+
+  if (!dynamicContent) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.pageBackgroundContainer}>
@@ -20,13 +49,10 @@ const FeaturePage = ({ color }) => {
         >
           <div className="content">
             <div className={styles.title}>
-              <h1>ACS & DC Integrations</h1>
+              <h1>{dynamicContent["title"]}</h1>
             </div>
             <div className={styles.desc}>
-              <p>
-                Seamless Integration Made Simple: Enhancing Application
-                Usability with ACS & DC Integrated Solutions
-              </p>
+              <p>{dynamicContent["tagLine"]}</p>
             </div>
           </div>
         </div>
@@ -38,31 +64,25 @@ const FeaturePage = ({ color }) => {
             <div className={styles.featureBulletPoints}>
               <div className={styles.bulletItem}>
                 <KeyFeatureCard
-                  title={"What ACS & DC Tools Are"}
-                  desc={
-                    "Simplify the lives of DC developers with our comprehensive toolbox, empowering them with a versatile set of tools. Streamline workflows, enhance productivity, and unlock new levels of efficiency in just a few clicks."
-                  }
-                  img={"tool"}
+                  title={dynamicContent["bulletInfo"][0]["bulletTitle"]}
+                  desc={dynamicContent["bulletInfo"][0]["bulletDesc"]}
+                  img={dynamicContent["bulletInfo"][0]["bulletIcon"]}
                   color={"White"}
                 />
               </div>
               <div className={styles.bulletItem}>
                 <KeyFeatureCard
-                  title={"When to use ACS & DC Tools"}
-                  desc={
-                    "Empower developers and admins with the essential ACS DC Tools designed to streamline the entire lifecycle of Document Cloud Solutions, from initial setup and development to migration and day-to-day operations. Simplify complex tasks, boost productivity, and maximize the efficiency of your ACS DC environment with our comprehensive toolkit."
-                  }
-                  img={"tool"}
+                  title={dynamicContent["bulletInfo"][1]["bulletTitle"]}
+                  desc={dynamicContent["bulletInfo"][1]["bulletDesc"]}
+                  img={dynamicContent["bulletInfo"][1]["bulletIcon"]}
                   color={"White"}
                 />
               </div>
               <div className={styles.bulletItem}>
                 <KeyFeatureCard
-                  title={"What ACS Samples Are "}
-                  desc={
-                    "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!"
-                  }
-                  img={"tool"}
+                  title={dynamicContent["bulletInfo"][2]["bulletTitle"]}
+                  desc={dynamicContent["bulletInfo"][2]["bulletDesc"]}
+                  img={dynamicContent["bulletInfo"][2]["bulletIcon"]}
                   color={"White"}
                 />
               </div>
@@ -74,13 +94,21 @@ const FeaturePage = ({ color }) => {
           className={`${styles.featurePageSection} ${styles.featurePageSectionColorGrey}`}
         >
           <div className={`content ${styles.featureContent}`}>
-            <FeatureHighlights imgFirst={false} />
+            <FeatureHighlights
+              title={dynamicContent["highlightFeature"][0]["highlightTitle"]}
+              desc={dynamicContent["highlightFeature"][0]["highlightDesc"]}
+              imgFirst={false}
+            />
           </div>
         </div>
 
         <div className={`${styles.featurePageSection} ${styles.sectionColor}`}>
           <div className={`content ${styles.featureContent}`}>
-            <FeatureHighlights imgFirst={true} />
+            <FeatureHighlights
+              title={dynamicContent["highlightFeature"][1]["highlightTitle"]}
+              desc={dynamicContent["highlightFeature"][1]["highlightDesc"]}
+              imgFirst={true}
+            />
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./featurePage.module.css";
 
-const FeatureHighlights = ({ imgFirst }) => {
+const FeatureHighlights = ({ title, desc, imgFirst }) => {
   const layoutType = imgFirst;
 
   const RenderHTML = ({ layoutType }) => {
@@ -15,16 +15,8 @@ const FeatureHighlights = ({ imgFirst }) => {
               </div>
 
               <div className={styles.featureItem}>
-                <h1>Sign to Sign Migration</h1>
-                <p>
-                  Simplify Template Migration: Our intuitive desktop application
-                  seamlessly transfers templates between Sign instances,
-                  eliminating the complexities of manual migration. Effortlessly
-                  manage and relocate templates, ensuring a smooth transition
-                  and saving valuable time in the process. Empower your workflow
-                  by streamlining template migration with our user-friendly
-                  desktop solution.
-                </p>
+                <h1>{title}</h1>
+                <p>{desc}</p>
               </div>
             </div>
           </div>
@@ -36,16 +28,8 @@ const FeatureHighlights = ({ imgFirst }) => {
           <div className={styles.featureHighlightsContainer}>
             <div className={styles.featureHighlightsItemContainer}>
               <div className={styles.featureItem}>
-                <h1>Sign to Sign Migration</h1>
-                <p>
-                  Simplify Template Migration: Our intuitive desktop application
-                  seamlessly transfers templates between Sign instances,
-                  eliminating the complexities of manual migration. Effortlessly
-                  manage and relocate templates, ensuring a smooth transition
-                  and saving valuable time in the process. Empower your workflow
-                  by streamlining template migration with our user-friendly
-                  desktop solution.
-                </p>
+                <h1>{title}</h1>
+                <p>{desc}</p>
               </div>
 
               <div className={styles.featureItem}>
