@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Acrobat Sign API Token Auth",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "sample",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Acrobat Sign API oAuth",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "sample",
+        "productType": ["Acrobat"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Audit Log Search",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "sample",
+        "productType": ["Acrobat"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Acrobat Sign API oAuth",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "integration",
+        "productType": ["Acrobat"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Salesforce",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "integration",
+        "productType": ["Acrobat", "Sign"],
+        "adobeCertified": true,
+        "featureFileName": ""
+    },
+    {
+        "title": "Power Apps",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "integration",
+        "productType": ["Acrobat", "Sign"],
+        "adobeCertified": true,
+        "featureFileName": ""
+    },
+    {
+        "title": "Sign To Sign Migrator",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Sign Download Tool",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    },
+    {
+        "title": "Dynamic Webform",
+        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": ""
+    }
+]

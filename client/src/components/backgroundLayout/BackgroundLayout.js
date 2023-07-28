@@ -34,11 +34,10 @@ const BackgroundLayout = ({ color, type }) => {
   }, [type]);
 
   const renderComponent = () => {
-    console.log(state);
     if (type === "search") {
       return <SearchPage />;
     } else {
-      return <FeaturePage />;
+      return <FeaturePage color={type} />;
     }
   };
 

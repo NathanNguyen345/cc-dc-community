@@ -16,7 +16,36 @@
 
 .button:hover {
   background-color: #FFC55A;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.blue{
+  background-color: #1473E6;
+}
+
+.blue:hover {
+  background-color: #E84F47;
+  transition: all 0.3s ease;
+}
+
+.saerch{
+  background-color: #E84F47;
+}
+
+.integrations{
+  background-color: #DA7A30;
+}
+
+.samples{
+  background-color: #5000CA;
+}
+
+.tools{
+  background-color: #449947;
+}
+
+.teal{
+  background-color: #56BDDF;
 }
 
 @media (max-width: 767px) {

@@ -6,7 +6,7 @@ import FeatureHighlights from "./FeatureHighlights";
 import { useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
 
-const FeaturePage = () => {
+const FeaturePage = ({ color }) => {
   const location = useLocation();
   const { state } = useFeaturePageDataContext();
 
@@ -79,7 +79,7 @@ const FeaturePage = () => {
             <h1>
               Unleash the Possibilities: Discover a World of Powerful Features
             </h1>
-            <Button text="More Features" />
+            <Button text="More Features" color={color} />
           </div>
         </div>
       </div>
