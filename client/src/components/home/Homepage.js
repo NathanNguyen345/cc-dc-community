@@ -1,4 +1,3 @@
-// create a functional component called Homepage
 import React, { useEffect } from "react";
 import styles from "./home.module.css";
 import splashImg from "../../assets/images/splashImg.png";
