@@ -23,6 +23,16 @@
     background-color: #F7F7F7;
 }
 
+.featureCallToAction{
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.featureCallToActionEnter{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
 /*****************************************************
                 FEATURE BULLET STYLES  
 *****************************************************/
@@ -33,6 +43,18 @@
     justify-content: space-between;
     width: 100%;
     gap: 50px;
+}
+
+.featureBulletPointsEnter{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+}
+
+.featureBulletPointsHide{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
 }
 
 .bulletItem{
@@ -74,6 +96,24 @@
 .featureItem{
     flex: 1;
     padding: 50px;
+}
+
+.featureItemHide{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-in-out;
+}
+
+.featureItemEnterLeft{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.featureItemEnterRight{
+    opacity: 1;
+    transform: translateX(100px);
+    transition: all 1s ease-in-out;
 }
 
 .featurePageSection h1{

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./backgroundLayout.module.css";
 import FeaturePage from "../features/FeaturePage";
 import Title from "../title/Title";
-import SearchPage from "../saerch/SearchPage";
+import SearchPage from "../search/SearchPage";
 import { useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
 

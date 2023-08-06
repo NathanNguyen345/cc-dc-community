@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "Acrobat Sign API Token Auth",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "sample",
@@ -8,6 +9,7 @@
         "featureFileName": ""
     },
     {
+        "id": 2,
         "title": "Acrobat Sign API oAuth",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "sample",
@@ -16,6 +18,7 @@
         "featureFileName": ""
     },
     {
+        "id": 3,
         "title": "Audit Log Search",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "sample",
@@ -24,7 +27,8 @@
         "featureFileName": ""
     },
     {
-        "title": "Acrobat Sign API oAuth",
+        "id": 4,
+        "title": "Kitchen Sink Text Tagging PDF",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "integration",
         "productType": ["Acrobat"],
@@ -32,6 +36,7 @@
         "featureFileName": ""
     },
     {
+        "id": 5,
         "title": "Salesforce",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "integration",
@@ -40,6 +45,7 @@
         "featureFileName": ""
     },
     {
+        "id": 6,
         "title": "Power Apps",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "integration",
@@ -48,6 +54,7 @@
         "featureFileName": ""
     },
     {
+        "id": 7,
         "title": "Sign To Sign Migrator",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "tool",
@@ -56,6 +63,7 @@
         "featureFileName": ""
     },
     {
+        "id": 8,
         "title": "Sign Download Tool",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "tool",
@@ -64,6 +72,7 @@
         "featureFileName": ""
     },
     {
+        "id": 9,
         "title": "Dynamic Webform",
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "tool",

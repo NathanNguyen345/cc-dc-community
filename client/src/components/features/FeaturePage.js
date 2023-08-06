@@ -5,10 +5,13 @@ import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import FeatureHighlights from "./FeatureHighlights";
 import { useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FeaturePage = ({ color }) => {
   const location = useLocation();
   const { state } = useFeaturePageDataContext();
+  const [divRef, isInView] = useIntersectionObserver();
+  const [divRef2, isInView2] = useIntersectionObserver();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,11 +21,20 @@ const FeaturePage = ({ color }) => {
     return <div>Loading...</div>;
   }
 
+  // FIXME: Need to fix issue with it not rendering when the page is refreshed
   return (
     <Fragment>
       <div className={styles.featurePageSection}>
         <div className={`content ${styles.featureContent}`}>
-          <div className={styles.featureBulletPoints}>
+          <div
+            className={`
+              ${
+                isInView
+                  ? styles.featureBulletPointsEnter
+                  : styles.featureBulletPointsHide
+              } ${styles.featureBulletPoints}`}
+            ref={divRef}
+          >
             <div className={styles.bulletItem}>
               <KeyFeatureCard
                 title={state.bulletInfo[0]["bulletTitle"]}
@@ -39,7 +51,7 @@ const FeaturePage = ({ color }) => {
                 color={"White"}
               />
             </div>
-            <div className={styles.bulletItem}>
+            <div className={styles.bulletItem} z>
               <KeyFeatureCard
                 title={state.bulletInfo[2]["bulletTitle"]}
                 desc={state.bulletInfo[2]["bulletDesc"]}
@@ -75,7 +87,14 @@ const FeaturePage = ({ color }) => {
 
       <div className={styles.featurePageSection}>
         <div className={`content ${styles.featureContent}`}>
-          <div className={styles.featureCallToAction}>
+          <div
+            className={
+              isInView2
+                ? styles.featureCallToActionEnter
+                : styles.featureCallToAction
+            }
+            ref={divRef2}
+          >
             <h1>
               Unleash the Possibilities: Discover a World of Powerful Features
             </h1>

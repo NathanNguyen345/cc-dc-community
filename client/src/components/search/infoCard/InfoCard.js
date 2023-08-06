@@ -11,6 +11,7 @@ import Button from "../../button/Button";
 
 const InfoCard = ({ cardData }) => {
   const {
+    id,
     title,
     desc,
     featureType,
@@ -53,7 +54,11 @@ const InfoCard = ({ cardData }) => {
         <div className={`${styles.infoCardItem} ${styles.infoCardFooter}`}>
           <div className={styles.infoCardFooterItem}>
             {productType.map((item) => {
-              return <div className="">{productTypeMap[item]}</div>;
+              return (
+                <div key={id + item} className="">
+                  {productTypeMap[item]}
+                </div>
+              );
             })}
             {adobeCertified ? (
               <div>

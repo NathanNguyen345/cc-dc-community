@@ -1,0 +1,66 @@
+.pageBackgroundContainer{
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+}
+
+.pageBackgroundContainer p{
+    text-shadow: none;
+}
+
+.pageBackgroundContainer h1{
+    color: white;
+    text-shadow: none;
+}
+
+h2{
+    color: black
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+    width: 100%;
+}
+
+.contentUpdate{
+    margin-bottom: 100px;
+}
+
+.searchFilterContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.searchCheckbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchCheckbox img{
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.searchCheckbox h2{
+    font-size: 1rem;
+    padding: 0px 10px;
+}
+
+.searchInputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.searchInputField{
+    width: 100%;
+    height: 30px;
+}
