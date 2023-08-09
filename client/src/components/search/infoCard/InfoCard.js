@@ -71,7 +71,7 @@ const InfoCard = ({ cardData }) => {
             ) : null}
           </div>
           <div className={styles.infoCardFooterItem}>
-            <Button text="Learn More" color="blue" />
+            <Button text="Learn More" color="blue" link={featureFileName} />
           </div>
         </div>
       </div>

@@ -34,6 +34,18 @@ const SearchPage = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchAllTools = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/data/tools/");
+      } catch (err) {
+        alert(err);
+      }
+    };
+
+    fetchAllTools();
+  }, []);
+
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -56,8 +68,6 @@ const SearchPage = () => {
   }, [searchQuery]);
 
   useEffect(() => {
-    console.log("searchQuery: ", searchQuery);
-    console.log("inputFilterResult: ", inputFilterResult);
     getCombinedFilterResult();
   }, [
     searchQuery,

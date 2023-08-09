@@ -5,6 +5,7 @@ import Title from "../title/Title";
 import SearchPage from "../search/SearchPage";
 import { useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
+import FeatureInfo from "../featureInfo/FeatureInfo";
 
 const BackgroundLayout = ({ color, type }) => {
   const root = document.documentElement;
@@ -19,14 +20,16 @@ const BackgroundLayout = ({ color, type }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:3000/data/pages/${type}PageData.json`
-        );
-        const data = await response.json();
-        fetchSuccess({ type: "FETCH_SUCCESS", payload: data });
-      } catch (err) {
-        fetchError({ type: "FETCH_ERROR", payload: err });
+      if (location.state === null) {
+        try {
+          const response = await fetch(
+            `http://localhost:3000/data/pages/${type}PageData.json`
+          );
+          const data = await response.json();
+          fetchSuccess({ type: "FETCH_SUCCESS", payload: data });
+        } catch (err) {
+          fetchError({ type: "FETCH_ERROR", payload: err });
+        }
       }
     };
 
@@ -36,14 +39,15 @@ const BackgroundLayout = ({ color, type }) => {
   const renderComponent = () => {
     if (type === "search") {
       return <SearchPage />;
+    } else if (type === "features") {
+      return <FeatureInfo />;
     } else {
-      return <FeaturePage color={type} />;
+      if (!state.loading) {
+        return <FeaturePage color={type} />;
+      }
+      return <div>Loading...</div>;
     }
   };
-
-  if (state.loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className={styles.pageBackgroundContainer}>
@@ -51,7 +55,12 @@ const BackgroundLayout = ({ color, type }) => {
         <div
           className={`${styles.backgroundPageSection} ${styles.pageColor} ${styles.intro}`}
         >
-          <Title title={state.title} desc={state.tagLine} />
+          <Title
+            title={state.title}
+            desc={state.tagLine}
+            creator={state.creator}
+            version={state.version}
+          />
         </div>
 
         <div className={styles.featureTopWave}></div>

@@ -3,6 +3,8 @@ export const initialState = {
   tagLine: "",
   bulletInfo: [],
   highlightFeature: [],
+  version: "",
+  creator: "",
   loading: true,
   error: null,
 };
@@ -18,6 +20,8 @@ const reducer = (state, action) => {
         tagLine: payload.payload.tagLine,
         bulletInfo: payload.payload?.bulletInfo,
         highlightFeature: payload.payload?.highlightFeature,
+        version: payload.payload?.version,
+        creator: payload.payload?.creator,
         loading: false,
         error: null,
       };
@@ -28,6 +32,8 @@ const reducer = (state, action) => {
         tagLine: null,
         bulletInfo: [],
         highlightFeature: [],
+        version: null,
+        creator: null,
         loading: false,
         error: payload.payload.error,
       };

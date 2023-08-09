@@ -109,6 +109,10 @@ const Navbar = () => {
           path="/search"
           element={<BackgroundLayout color="Search" type="search" />}
         />
+        <Route
+          path="/search/:featureName"
+          element={<BackgroundLayout color="Features" type="features" />}
+        />
         <Route path="/Contact" element={<BackgroundLayout color="Contact" />} />
       </Routes>
     </Router>

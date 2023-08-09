@@ -21,18 +21,13 @@ const FeaturePage = ({ color }) => {
     return <div>Loading...</div>;
   }
 
-  // FIXME: Need to fix issue with it not rendering when the page is refreshed
   return (
     <Fragment>
       <div className={styles.featurePageSection}>
         <div className={`content ${styles.featureContent}`}>
           <div
             className={`
-              ${
-                isInView
-                  ? styles.featureBulletPointsEnter
-                  : styles.featureBulletPointsHide
-              } ${styles.featureBulletPoints}`}
+              ${styles.featureBulletPointsEnter} ${styles.featureBulletPoints}`}
             ref={divRef}
           >
             <div className={styles.bulletItem}>
@@ -51,7 +46,7 @@ const FeaturePage = ({ color }) => {
                 color={"White"}
               />
             </div>
-            <div className={styles.bulletItem} z>
+            <div className={styles.bulletItem}>
               <KeyFeatureCard
                 title={state.bulletInfo[2]["bulletTitle"]}
                 desc={state.bulletInfo[2]["bulletDesc"]}
@@ -89,9 +84,10 @@ const FeaturePage = ({ color }) => {
         <div className={`content ${styles.featureContent}`}>
           <div
             className={
+              // FIXME: Not rendering like it should and it's hiding
               isInView2
                 ? styles.featureCallToActionEnter
-                : styles.featureCallToAction
+                : styles.featureCallToActionEnter
             }
             ref={divRef2}
           >

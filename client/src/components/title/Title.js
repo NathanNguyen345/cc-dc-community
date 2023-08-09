@@ -2,8 +2,32 @@ import React from "react";
 import styles from "./title.module.css";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const Title = ({ title, desc }) => {
+const Title = ({ title, desc, creator, version }) => {
   const [divRef, isInView] = useIntersectionObserver();
+
+  const renderVersion = () => {
+    if (version) {
+      return (
+        <div className={styles.desc}>
+          <p>Version: {version}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
+  const renderCreator = () => {
+    if (version) {
+      return (
+        <div className={styles.desc}>
+          <p>Creator: {creator}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   return (
     <div className="content">
@@ -21,6 +45,8 @@ const Title = ({ title, desc }) => {
         <div className={styles.desc}>
           <p>{desc}</p>
         </div>
+        {renderVersion()}
+        {renderCreator()}
       </div>
     </div>
   );
