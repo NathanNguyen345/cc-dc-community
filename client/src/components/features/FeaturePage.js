@@ -3,7 +3,7 @@ import styles from "./featurePage.module.css";
 import Button from "../button/Button";
 import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import FeatureHighlights from "./FeatureHighlights";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
@@ -84,7 +84,6 @@ const FeaturePage = ({ color }) => {
         <div className={`content ${styles.featureContent}`}>
           <div
             className={
-              // FIXME: Not rendering like it should and it's hiding
               isInView2
                 ? styles.featureCallToActionEnter
                 : styles.featureCallToActionEnter
@@ -94,7 +93,9 @@ const FeaturePage = ({ color }) => {
             <h1>
               Unleash the Possibilities: Discover a World of Powerful Features
             </h1>
-            <Button text="More Features" color={color} />
+            <Link to="/search">
+              <Button text="More Features" color={color} />
+            </Link>
           </div>
         </div>
       </div>

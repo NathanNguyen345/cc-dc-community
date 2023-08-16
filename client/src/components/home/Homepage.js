@@ -7,6 +7,7 @@ import Button from "../button/Button";
 import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   const [divRef, isInView] = useIntersectionObserver();
@@ -48,7 +49,9 @@ const Homepage = () => {
               </p>
             </div>
             <div className={styles.button}>
-              <Button text="Click to get started" />
+              <Link to="/search">
+                <Button text="Find your perfect solution" />
+              </Link>
             </div>
           </div>
 
@@ -99,7 +102,10 @@ const Homepage = () => {
               </p>
             </div>
             <div className={styles.buttonRight}>
-              <Button text="Click to get started" />
+              <Button
+                text="Checkout our API today"
+                externalLink="https://secure.na1.adobesign.com/public/docs/restapi/v6"
+              />
             </div>
           </div>
         </div>
@@ -122,36 +128,42 @@ const Homepage = () => {
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <KeyFeatureCard
-                title={"Integrations"}
-                desc={"Document Cloud integrations to accelerate deployment."}
-                img={"gear"}
-                color={"Default"}
-              />
+              <Link to="/integrations">
+                <KeyFeatureCard
+                  title={"Integrations"}
+                  desc={"Document Cloud integrations to accelerate deployment."}
+                  img={"gear"}
+                  color={"Default"}
+                />
+              </Link>
             </div>
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <KeyFeatureCard
-                title={"Sample"}
-                desc={
-                  "Collection of Document Cloud code samples, examples, and templates"
-                }
-                img={"file"}
-                color={"Default"}
-              />
+              <Link to="/samples">
+                <KeyFeatureCard
+                  title={"Sample"}
+                  desc={
+                    "Collection of Document Cloud code samples, examples, and templates"
+                  }
+                  img={"file"}
+                  color={"Default"}
+                />
+              </Link>
             </div>
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <KeyFeatureCard
-                title={"Tool"}
-                desc={
-                  "A set of tools for Document Cloud to make developer lives easier"
-                }
-                img={"tool"}
-                color={"Default"}
-              />
+              <Link to="/tools">
+                <KeyFeatureCard
+                  title={"Tool"}
+                  desc={
+                    "A set of tools for Document Cloud to make developer lives easier"
+                  }
+                  img={"tool"}
+                  color={"Default"}
+                />
+              </Link>
             </div>
           </div>
         </div>
