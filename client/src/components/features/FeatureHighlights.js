@@ -12,7 +12,9 @@ const FeatureHighlights = ({ title, desc, imgFirst }) => {
       return (
         <>
           <div className={styles.featureHighlightsContainer}>
-            <div className={styles.featureHighlightsItemContainer}>
+            <div
+              className={`${styles.featureHighlightsItemContainer} ${styles.featureHighlightItemContainerReverse}`}
+            >
               <div
                 className={`${
                   isInView

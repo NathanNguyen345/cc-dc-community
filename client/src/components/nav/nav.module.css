@@ -188,7 +188,7 @@ a{
 
 @media (min-width: 1280px) and (max-width: 1619px) {
     .navContent{
-        width: 60%;
+        width: 80%;
     }
 
     a{
@@ -196,7 +196,7 @@ a{
     }
   }
 
-  @media (min-width: 1620px){
+@media (min-width: 1620px) and (max-width: 2559px){
     .navContent{
         width: 65%;
     }
@@ -204,4 +204,17 @@ a{
     a{
         font-size: 1rem;
     }
+  }
+  
+@media (min-width: 2560px) and (max-width: 3839px) {  
+    .navContent{
+      width: 50%;
+  }
+  }
+  
+  
+@media (min-width: 3840px) {
+    .navContent{
+      width: 40%;
+  }
   }

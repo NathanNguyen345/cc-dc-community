@@ -57,36 +57,11 @@ body {
   .content{
       width: 80%;
   }
-
-  h1{
-      font-size: 1.5rem;
-  }
-
-  p{
-      font-size: .75rem;
-  }
-  img{
-      display: none;
-      visibility: visible;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .content{
       width: 80%;
-  }
-
-  h1{
-      font-size: 2rem;
-  }
-
-  p{
-      font-size: 1rem;
-  }
-
-  img{
-      max-width: 250px;
-      max-height: 250px;
   }
 }
 
@@ -94,29 +69,29 @@ body {
   .content{
       width: 70%;
   }
-
-  h1{
-      font-size: 2rem;
-  }
-
-  p{
-      font-size: 1rem;
-  }
-
-  img{
-      max-width: 300px;
-      max-height: 300px;
-  }
 }
 
 @media (min-width: 1280px) and (max-width: 1619px) {
   .content{
-      width: 60%;
+      width: 80%;
   }
 }
 
-@media (min-width: 1620px){
+@media (min-width: 1620px) and (max-width: 2559px){
   .content{
       width: 65%;
   }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {  
+  .content{
+    width: 50%;
+}
+}
+
+
+@media (min-width: 3840px) {
+  .content{
+    width: 40%;
+}
 }

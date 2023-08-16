@@ -59,7 +59,7 @@ const Homepage = () => {
                 : `${styles.splashImgFlex}`
             }
           >
-            <div>
+            <div className={`${styles.homeImg} ${styles.homeImgRight}`}>
               <img src={splashImg} alt="splashImg" />
             </div>
           </div>
@@ -73,7 +73,7 @@ const Homepage = () => {
                 : `${styles.spotlightImgFlex}`
             }
           >
-            <div>
+            <div className={`${styles.homeImg} ${styles.homeImgLeft} `}>
               <img src={spotlghtImg} alt="spotlightImg" />
             </div>
           </div>
@@ -188,7 +188,7 @@ const Homepage = () => {
                 : `${styles.aboutImgFlex}`
             }
           >
-            <div className={`${styles.centerDiv}`}>
+            <div className={`${styles.homeImg} ${styles.homeImgRight}`}>
               <img src={aboutImg} alt="aboutImg" />
             </div>
           </div>

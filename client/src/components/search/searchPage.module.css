@@ -19,7 +19,7 @@ h2{
 
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 50px;
     width: 100%;
 }
@@ -33,8 +33,31 @@ h2{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.filterIconContainer{
+    cursor: pointer;
+    position: relative;
+}
+
+.filterDropdownContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    width: 100%;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.filterDropdownContainerHidden{
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
 }
 
 .searchCheckbox{
@@ -61,6 +84,5 @@ h2{
 }
 
 .searchInputField{
-    width: 100%;
     height: 30px;
 }

@@ -4,6 +4,7 @@ import InfoCard from "./infoCard/InfoCard";
 import AdobeLogo from "../../assets/icons/AdobeLogo.png";
 import AcrobatLogo from "../../assets/icons/AcrobatLogo.png";
 import SignLogo from "../../assets/icons/SignLogo.png";
+import FilterSVG from "../../assets/icons/FilterSVG";
 
 const SearchPage = () => {
   const [fetchSearchData, setFetchSearchData] = useState([]);
@@ -13,6 +14,8 @@ const SearchPage = () => {
   const [acrobatFilterResult, setAcrobatFilterResult] = useState([]);
   const [certifiedFilterResult, setCertifiedFilterResult] = useState([]);
   const [resultOutput, setResultOutput] = useState([]);
+  const [toggleFilter, setToggleFilter] = useState(false);
+  const [numberOfResults, setNumberOfResults] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,18 +35,6 @@ const SearchPage = () => {
     };
 
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchAllTools = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/data/tools/");
-      } catch (err) {
-        alert(err);
-      }
-    };
-
-    fetchAllTools();
   }, []);
 
   const handleInputChange = (e) => {
@@ -87,6 +78,7 @@ const SearchPage = () => {
       );
     });
     setResultOutput(combinedFilterResult);
+    setNumberOfResults(combinedFilterResult.length);
   };
 
   const handleCheckbox = (e) => {
@@ -134,11 +126,44 @@ const SearchPage = () => {
     return <div>Loading...</div>;
   }
 
+  const handleFilterClick = () => {
+    setToggleFilter(!toggleFilter);
+    console.log(toggleFilter);
+  };
+
   return (
     <div className={styles.pageBackgroundContainer}>
       <div className="container">
         <div className={`content ${styles.contentUpdate}`}>
           <div className={styles.searchFilterContainer}>
+            <div className={styles.searchInputContainer}>
+              <input
+                className={styles.searchInputField}
+                type="text"
+                placeholder="Search for something"
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className={styles.filterIconContainer}>
+              <div onClick={handleFilterClick}>
+                <FilterSVG />
+              </div>
+            </div>
+          </div>
+
+          <h2>Results Found: {numberOfResults}</h2>
+
+          <div
+            className={
+              toggleFilter
+                ? styles.filterDropdownContainer
+                : styles.filterDropdownContainerHidden
+            }
+          >
+            <div className={styles.searchCheckbox}>
+              <h2>Filter By: </h2>
+            </div>
             <div className={styles.searchCheckbox}>
               <img src={SignLogo}></img>
               <h2>Sign</h2>
@@ -156,15 +181,6 @@ const SearchPage = () => {
                 type="checkbox"
                 value="Certified"
                 onClick={handleCheckbox}
-              />
-            </div>
-
-            <div className={styles.searchInputContainer}>
-              <input
-                className={styles.searchInputField}
-                type="text"
-                placeholder="Search"
-                onChange={handleInputChange}
               />
             </div>
           </div>

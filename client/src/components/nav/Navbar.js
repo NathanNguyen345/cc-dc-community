@@ -32,7 +32,6 @@ const Navbar = () => {
 
   const toggleNaVMenu = () => {
     setShowMenu(!showMenu);
-    console.log("clicked");
   };
 
   return (
