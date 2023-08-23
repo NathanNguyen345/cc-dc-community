@@ -8,6 +8,7 @@ import KeyFeatureCard from "../keyFeatureCard/KeyFeatureCard";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Footer from "../footer/Footer";
 
 const Homepage = () => {
   const [divRef, isInView] = useIntersectionObserver();
@@ -223,6 +224,7 @@ const Homepage = () => {
       </div>
 
       <div className={styles.svgBottom}></div>
+      <Footer color="Default" />
     </div>
   );
 };

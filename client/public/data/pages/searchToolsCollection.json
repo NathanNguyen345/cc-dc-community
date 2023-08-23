@@ -50,7 +50,7 @@
         "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
         "featureType": "integration",
         "productType": ["Acrobat", "Sign"],
-        "adobeCertified": true,
+        "adobeCertified": false,
         "featureFileName": "PowerApps"
     },
     {

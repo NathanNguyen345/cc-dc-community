@@ -1,0 +1,50 @@
+.contactContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #343434;
+    justify-content: center;
+}
+
+.contactImg{
+    width: 700px;
+    height: 700px;
+}
+
+.imgContainer h2{
+    font-size: 100px;
+    color: white;
+}
+
+.contactMessageContainer{
+    display: flex;
+    height: 100%;
+}
+
+/*****************************************************
+                WAVE STYLES  
+*****************************************************/
+.svgTop{
+    background-image: url("../../assets/images/topWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.svgBottom{
+    background-image: url("../../assets/images/bottomWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}

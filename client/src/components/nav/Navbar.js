@@ -5,6 +5,7 @@ import styles from "./nav.module.css";
 import navButton from "../../assets/icons/navButton.png";
 import navCross from "../../assets/icons/navCross.png";
 import BackgroundLayout from "../backgroundLayout/BackgroundLayout";
+import Contact from "../contact/Contact";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -112,7 +113,7 @@ const Navbar = () => {
           path="/search/:featureName"
           element={<BackgroundLayout color="Features" type="features" />}
         />
-        <Route path="/Contact" element={<BackgroundLayout color="Contact" />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </Router>
   );

@@ -244,6 +244,10 @@ img{
     opacity: 1;
 }
 
+.contactButton{
+    margin-top: 50px;
+}
+
 
 
 /*****************************************************
@@ -300,6 +304,11 @@ img{
     .contactContainer{
         padding: 0;
         display: block;
+        margin-bottom: 20px;
+    }
+
+    .contactButton{
+        margin-top: 20px;
     }
   }
   

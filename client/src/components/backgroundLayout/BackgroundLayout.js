@@ -6,6 +6,7 @@ import SearchPage from "../search/SearchPage";
 import { useLocation } from "react-router-dom";
 import useFeaturePageDataContext from "../../data/featurePageDataContext";
 import FeatureInfo from "../featureInfo/FeatureInfo";
+import Footer from "../footer/Footer";
 
 const BackgroundLayout = ({ color, type }) => {
   const root = document.documentElement;
@@ -67,11 +68,8 @@ const BackgroundLayout = ({ color, type }) => {
 
         {renderComponent()}
       </div>
-
       <div className={styles.featureBottomWave}></div>
-      <div>
-        <h1>FOOTER GOES HERE</h1>
-      </div>
+      <Footer color={color} />
     </div>
   );
 };

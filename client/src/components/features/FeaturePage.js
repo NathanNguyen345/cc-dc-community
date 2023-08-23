@@ -93,9 +93,11 @@ const FeaturePage = ({ color }) => {
             <h1>
               Unleash the Possibilities: Discover a World of Powerful Features
             </h1>
-            <Link to="/search">
-              <Button text="More Features" color={color} />
-            </Link>
+            <div className={styles.callToActionButton}>
+              <Link to="/search">
+                <Button text="More Features" color={color} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
