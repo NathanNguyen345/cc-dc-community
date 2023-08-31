@@ -15,7 +15,7 @@ const useIntersectionObserver = () => {
       });
     });
 
-    const currentDivRef = divRef.current; // Create a local variable
+    const currentDivRef = divRef.current;
 
     if (currentDivRef) {
       observer.observe(currentDivRef);

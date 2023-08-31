@@ -125,6 +125,7 @@ const Homepage = () => {
               </h1>
             </div>
           </div>
+
           <div className={styles.keyfeatureContent}>
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
