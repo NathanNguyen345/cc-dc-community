@@ -21,7 +21,7 @@ const SearchPage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/data/pages/searchToolsCollection.json"
+          `http://localhost:3000${process.env.PUBLIC_URL}/data/pages/searchToolsCollection.json`
         );
         const data = await response.json();
         setFetchSearchData(data);
@@ -128,7 +128,6 @@ const SearchPage = () => {
 
   const handleFilterClick = () => {
     setToggleFilter(!toggleFilter);
-    console.log(toggleFilter);
   };
 
   return (

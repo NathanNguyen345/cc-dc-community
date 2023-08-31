@@ -15,7 +15,7 @@ const FeatureInfo = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/data/tools/${fileName}/contentTemplate.json`
+          `http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/contentTemplate.json`
         );
         const data = await response.json();
         setContentData(data);
@@ -70,7 +70,7 @@ const FeatureInfo = () => {
           return (
             <div key={index} className={styles.featureInfoImageContent}>
               <img
-                src={`http://localhost:3000/data/tools/${fileName}/images/${item.content}`}
+                src={`http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/images/${item.content}`}
               ></img>
             </div>
           );
@@ -78,8 +78,6 @@ const FeatureInfo = () => {
       });
     }
   };
-
-  console.log(contentData);
 
   return (
     <div className={styles.featureInfoContainer}>

@@ -24,7 +24,7 @@ const BackgroundLayout = ({ color, type }) => {
       if (location.state === null) {
         try {
           const response = await fetch(
-            `http://localhost:3000/data/pages/${type}PageData.json`
+            `http://localhost:3000${process.env.PUBLIC_URL}/data/pages/${type}PageData.json`
           );
           const data = await response.json();
           fetchSuccess({ type: "FETCH_SUCCESS", payload: data });
