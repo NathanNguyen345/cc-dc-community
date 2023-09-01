@@ -42,13 +42,13 @@ const InfoCard = ({ cardData }) => {
   return (
     <div className={styles.infoCard}>
       <div className={styles.infoCardContainer}>
-        <div className={styles.infoCardItem}>
+        <div className={`${styles.infoCardItem} ${styles.infoCardTitle}`}>
           <div className={styles.infoCardFeatureType}>
             {imgMap[featureType]}
           </div>
           <h3>{title}</h3>
         </div>
-        <div className={styles.infoCardItem}>
+        <div className={`${styles.infoCardItem} ${styles.infoCardBody}`}>
           <p className={styles.itemDesc}>{desc}</p>
         </div>
         <div className={`${styles.infoCardItem} ${styles.infoCardFooter}`}>

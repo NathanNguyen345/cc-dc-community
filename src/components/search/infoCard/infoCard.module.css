@@ -6,7 +6,7 @@
     border-radius: 15px;
     box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
-
+    display: flex;
 }
 
 .infoCard:hover{
@@ -16,8 +16,10 @@
 
 .infoCardContainer{
     display: flex;
+    width: 100%;
     flex-direction: column;
     padding: 30px;
+    box-sizing: border-box;
 }
 
 .infoCardItem{
@@ -32,9 +34,10 @@
 }
 
 .infoCard h3{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #4909C2;
     margin: 0px 10px;
+    text-align: left;
 }
 
 .infoCardFeatureType{
@@ -42,15 +45,28 @@
     height: 30px;
 }
 
-.itemDesc{
-    font-size: .9rem;
-    text-align: left;
+.infoCardTitle{
+    display: flex;
+    height: 10%;
+}
+
+.infoCardBody{
+    display: flex;
+    height: 70%;
+    align-items: flex-start;
 }
 
 .infoCardFooter{
     display: flex;
+    height: 10%;
     justify-content: space-between;
 }
+
+.itemDesc{
+    font-size: .8rem;
+    text-align: left;
+}
+
 
 .infoCardFooterItem{
     display: flex;

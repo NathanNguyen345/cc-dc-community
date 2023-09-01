@@ -24,11 +24,16 @@ const SearchPage = () => {
           `http://localhost:3000${process.env.PUBLIC_URL}/data/pages/searchToolsCollection.json`
         );
         const data = await response.json();
-        setFetchSearchData(data);
-        setInputFilterResult(data);
-        setSignFilterResult(data);
-        setAcrobatFilterResult(data);
-        setCertifiedFilterResult(data);
+
+        const sortedData = [...data].sort((a, b) => {
+          return a.id.localeCompare(b.id, undefined, { sensitivity: "base" });
+        });
+
+        setFetchSearchData(sortedData);
+        setInputFilterResult(sortedData);
+        setSignFilterResult(sortedData);
+        setAcrobatFilterResult(sortedData);
+        setCertifiedFilterResult(sortedData);
       } catch (err) {
         alert(err);
       }
