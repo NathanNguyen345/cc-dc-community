@@ -1,11 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  BrowserRouter,
-} from "react-router-dom";
+import { Route, Routes, Link, HashRouter } from "react-router-dom";
 import Homepage from "../home/Homepage";
 import styles from "./nav.module.css";
 import navButton from "../../assets/icons/navButton.png";
@@ -42,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div className={styles.navContainer} ref={navRef}>
         <div className={styles.navBackGroundContainer}>
           <div className={styles.navContent}>
@@ -121,7 +115,7 @@ const Navbar = () => {
         />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
