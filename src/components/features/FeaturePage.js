@@ -10,13 +10,15 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 const FeaturePage = ({ color }) => {
   const location = useLocation();
   const { state } = useFeaturePageDataContext();
-  const [divRef, isInView] = useIntersectionObserver();
+  const [divRef] = useIntersectionObserver();
   const [divRef2, isInView2] = useIntersectionObserver();
 
+  // Scroll to top of page when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  // If the data is not loaded, display a loading message
   if (typeof state.bulletInfo === "undefined") {
     return <div>Loading...</div>;
   }

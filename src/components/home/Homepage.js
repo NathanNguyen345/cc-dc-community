@@ -18,16 +18,23 @@ const Homepage = () => {
   const [divRef5, isInView5] = useIntersectionObserver();
   const location = useLocation();
 
+  // Scroll to top of page when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
   return (
+    /* Render out the SVG top wave image for homepage*/
     <div className="container">
       <div className={styles.svgTop}></div>
 
+      {/*********************************************************************
+       *                      HOMEPAGE SECTION
+       ********************************************************************/}
       <div className="content">
+        {/*  Render out the content*/}
         <div className={styles.splashContainer} ref={divRef}>
+          {/*  CSS animation */}
           <div
             className={
               isInView
@@ -63,12 +70,16 @@ const Homepage = () => {
                 : `${styles.splashImgFlex}`
             }
           >
+            {/*  Render out the image */}
             <div className={`${styles.homeImg} ${styles.homeImgRight}`}>
               <img src={splashImg} alt="splashImg" />
             </div>
           </div>
         </div>
 
+        {/*********************************************************************
+         *                      SPOTLIGHT SECTION
+         ********************************************************************/}
         <div className={styles.spotlightContainer} ref={divRef2}>
           <div
             className={
@@ -77,6 +88,7 @@ const Homepage = () => {
                 : `${styles.spotlightImgFlex}`
             }
           >
+            {/*  Render out the IMAGE */}
             <div className={`${styles.homeImg} ${styles.homeImgLeft} `}>
               <img src={spotlghtImg} alt="spotlightImg" />
             </div>
@@ -89,6 +101,7 @@ const Homepage = () => {
                 : `${styles.spotlightSectionFlex}`
             }
           >
+            {/*  Render out the CONTENT */}
             <div className={styles.spotlightTitle}>
               <h1>
                 Unleash Our Versatile <span>API</span> Anywhere, Anytime!
@@ -111,6 +124,9 @@ const Homepage = () => {
           </div>
         </div>
 
+        {/*********************************************************************
+         *                     KEY FEATURES SECTION
+         ********************************************************************/}
         <div className={styles.keyfeatureContainer} ref={divRef3}>
           <div
             className={
@@ -119,6 +135,7 @@ const Homepage = () => {
                 : `${styles.keyfeatureTitle}`
             }
           >
+            {/*  Render out the TITLE */}
             <div className={styles.keyTitle}>
               <h1>
                 Transforming Ideas into Powerful <span>Solutions</span>
@@ -126,6 +143,7 @@ const Homepage = () => {
             </div>
           </div>
 
+          {/*  Render out the CONTENT w/ KetFeatureCard component */}
           <div className={styles.keyfeatureContent}>
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
@@ -170,6 +188,9 @@ const Homepage = () => {
           </div>
         </div>
 
+        {/*********************************************************************
+         *                     ABOUT SECTION
+         ********************************************************************/}
         <div className={styles.aboutContainer} ref={divRef4}>
           <div
             className={
@@ -178,6 +199,7 @@ const Homepage = () => {
                 : `${styles.aboutSectionFlex}`
             }
           >
+            {/*  Render out the CONTENT */}
             <div className={styles.aboutTitle}>
               <h1>
                 Meet the <span>Visionaries</span> Empowering this Transformation
@@ -202,12 +224,16 @@ const Homepage = () => {
                 : `${styles.aboutImgFlex}`
             }
           >
+            {/*  Render out the IMAGE */}
             <div className={`${styles.homeImg} ${styles.homeImgRight}`}>
               <img src={aboutImg} alt="aboutImg" />
             </div>
           </div>
         </div>
 
+        {/*********************************************************************
+         *                    CONTACT SECTION
+         ********************************************************************/}
         <div className={styles.contactContainer} ref={divRef5}>
           <div
             className={

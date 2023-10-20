@@ -5,6 +5,7 @@ import styles from "./footer.module.css";
 const Footer = (color = "") => {
   const root = document.documentElement;
 
+  // Set the footer color to the default color for that page
   useEffect(() => {
     if (!color) {
       root.style.setProperty("--pageColor", `var(--pageColor${color})`);

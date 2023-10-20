@@ -5,6 +5,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 const Title = ({ title, desc, creator, version }) => {
   const [divRef, isInView] = useIntersectionObserver();
 
+  // Render version if it exists for feature page
   const renderVersion = () => {
     if (version) {
       return (
@@ -17,6 +18,7 @@ const Title = ({ title, desc, creator, version }) => {
     return null;
   };
 
+  // Render creator if it exists for feature page
   const renderCreator = () => {
     if (version) {
       return (

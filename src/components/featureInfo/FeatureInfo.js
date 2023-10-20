@@ -11,6 +11,7 @@ const FeatureInfo = () => {
   const [contentData, setContentData] = useState({});
   const { fetchSuccess, fetchError } = useFeaturePageDataContext();
 
+  // Fetch data from json file and store in state management
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,54 +30,58 @@ const FeatureInfo = () => {
     fetchData();
   }, []);
 
+  // Render the 3 cards from within the feature page
   const renderHighlight = () => {
     if (Object.keys(contentData).length === 0) {
       return <div>Loading...</div>;
-    } else {
-      return contentData.keyFeature.map((item, index) => {
-        return (
-          <div className={styles.bulletItem}>
-            <KeyFeatureCard
-              key={index}
-              title={item.title}
-              desc={item.desc}
-              img="file"
-              color="Black"
-            />
-          </div>
-        );
-      });
     }
+
+    return contentData.keyFeature.map((item, index) => (
+      <div key={index} className={styles.bulletItem}>
+        <KeyFeatureCard
+          title={item.title}
+          desc={item.desc}
+          img="file"
+          color="Black"
+        />
+      </div>
+    ));
   };
 
+  // Render the content for the feature such as content and installation
   const renderContent = (content) => {
     if (Object.keys(contentData).length === 0) {
       return <div>Loading...</div>;
-    } else {
-      return content.map((item, index) => {
-        if (item.type === "text") {
-          return (
-            <div key={index} className={styles.featureInfoTextContent}>
-              <pre>{item.content}</pre>
-            </div>
-          );
-        } else if (item.type === "link") {
-          return (
-            <div key={index} className={styles.featureInfoLinkContent}>
-              <a href={item.content}>Click Here To Go To Repo</a>
-            </div>
-          );
-        } else {
-          return (
-            <div key={index} className={styles.featureInfoImageContent}>
-              <img
-                src={`http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/images/${item.content}`}
-              ></img>
-            </div>
-          );
-        }
-      });
     }
+
+    return content.map((item, index) => {
+      let renderedContent;
+
+      if (item.type === "text") {
+        renderedContent = (
+          <div key={index} className={styles.featureInfoTextContent}>
+            <pre>{item.content}</pre>
+          </div>
+        );
+      } else if (item.type === "link") {
+        renderedContent = (
+          <div key={index} className={styles.featureInfoLinkContent}>
+            <a href={item.content}>Click Here To Go To Repo</a>
+          </div>
+        );
+      } else {
+        renderedContent = (
+          <div key={index} className={styles.featureInfoImageContent}>
+            <img
+              src={`http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/images/${item.content}`}
+              alt=""
+            />
+          </div>
+        );
+      }
+
+      return renderedContent;
+    });
   };
 
   return (

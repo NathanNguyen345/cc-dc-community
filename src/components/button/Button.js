@@ -9,12 +9,14 @@ const Button = ({ text, color, link = null, externalLink = null }) => {
     window.open(externalLink);
   };
 
+  // This is a button for links to the feature detail in the search page
   if (link !== null) {
     return (
       <Link to={`/search/${fileName}`} state={{ fileName: fileName }}>
         <button className={`${styles.button} ${styles[color]}`}>{text}</button>
       </Link>
     );
+    // This is a button for external links
   } else if (externalLink !== null) {
     return (
       <button
@@ -24,6 +26,7 @@ const Button = ({ text, color, link = null, externalLink = null }) => {
         {text}
       </button>
     );
+    // This is a button for internal links to other pages
   } else {
     return (
       <button className={`${styles.button} ${styles[color]}`}>{text}</button>

@@ -1,3 +1,6 @@
+/*****************************************************
+                FEATURE INFO STYLES  
+*****************************************************/
 .featureInfoContainer{
     display: flex;
     flex-direction: column;

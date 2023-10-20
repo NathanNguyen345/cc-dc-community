@@ -1,3 +1,6 @@
+/*****************************************************
+                SEARCH STYLES  
+*****************************************************/
 .pageBackgroundContainer{
     width: 100vw;
     height: 100%;
@@ -88,6 +91,9 @@ h2{
     height: 30px;
 }
 
+/*****************************************************
+                MEDIA QUERIES  
+*****************************************************/
 @media (max-width: 767px) {
     .cardContainer{
         /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */

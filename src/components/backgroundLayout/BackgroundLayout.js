@@ -13,12 +13,14 @@ const BackgroundLayout = ({ color, type }) => {
   const location = useLocation();
   const { state, fetchSuccess, fetchError } = useFeaturePageDataContext();
 
+  // Scroll to top of page when page is loaded
   useEffect(() => {
     window.scrollTo(0, 0);
     root.style.setProperty("--pageColor", `var(--pageColor${color})`);
     root.style.setProperty("--sectionColor", `var(--sectionColor${color})`);
   }, [location]);
 
+  // Fetch data from json file and store in state management
   useEffect(() => {
     const fetchData = async () => {
       if (location.state === null) {
@@ -37,6 +39,7 @@ const BackgroundLayout = ({ color, type }) => {
     fetchData();
   }, [type]);
 
+  // Render component based on type of page
   const renderComponent = () => {
     if (type === "search") {
       return <SearchPage />;

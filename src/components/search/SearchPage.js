@@ -17,6 +17,7 @@ const SearchPage = () => {
   const [toggleFilter, setToggleFilter] = useState(false);
   const [numberOfResults, setNumberOfResults] = useState(0);
 
+  // Fetch data from JSON file to load up information for the cards
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,6 +46,7 @@ const SearchPage = () => {
     setSearchQuery(e.target.value);
   };
 
+  // Filter and update the list of searchable features
   const updateFetchedDataForSearch = () => {
     const filteredData = fetchSearchData.filter((item) => {
       const lowerCaseTitle = item.title.toLowerCase();
@@ -54,6 +56,7 @@ const SearchPage = () => {
     setInputFilterResult(filteredData);
   };
 
+  // Calls the updateFetchDataForSearch function when the searchQuery state changes
   useEffect(() => {
     if (searchQuery === "") {
       setInputFilterResult(fetchSearchData);
@@ -62,6 +65,7 @@ const SearchPage = () => {
     }
   }, [searchQuery]);
 
+  // Calls the getCombinedFilterResult if anything in the filter changes
   useEffect(() => {
     getCombinedFilterResult();
   }, [
@@ -72,6 +76,7 @@ const SearchPage = () => {
     certifiedFilterResult,
   ]);
 
+  // Combines all the filters together
   const getCombinedFilterResult = () => {
     const combinedFilterResult = fetchSearchData.filter((item) => {
       return (
@@ -85,6 +90,7 @@ const SearchPage = () => {
     setNumberOfResults(combinedFilterResult.length);
   };
 
+  // Handles the checkbox filter
   const handleCheckbox = (e) => {
     const checkboxValue = e.target.value;
 
@@ -126,16 +132,21 @@ const SearchPage = () => {
     }
   };
 
+  // Loading screen
   if (!fetchSearchData) {
     return <div>Loading...</div>;
   }
 
+  // Handles the filter dropdown
   const handleFilterClick = () => {
     setToggleFilter(!toggleFilter);
   };
 
   return (
     <div className={styles.pageBackgroundContainer}>
+      {/*********************************************************************
+       *                     SEARCH BAR SECTION
+       ********************************************************************/}
       <div className="container">
         <div className={`content ${styles.contentUpdate}`}>
           <div className={styles.searchFilterContainer}>
@@ -157,6 +168,9 @@ const SearchPage = () => {
 
           <h2>Results Found: {numberOfResults}</h2>
 
+          {/*********************************************************************
+           *                     FILTER DROPDOWN SECTION
+           ********************************************************************/}
           <div
             className={
               toggleFilter
@@ -188,6 +202,9 @@ const SearchPage = () => {
             </div>
           </div>
 
+          {/*********************************************************************
+           *                     RESULT CARD SECTION
+           ********************************************************************/}
           <div className={styles.cardContainer}>
             {resultOutput.length === 0 ? (
               <div>

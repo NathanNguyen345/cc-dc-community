@@ -11,6 +11,7 @@ const Navbar = () => {
   const navRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
 
+  // useEffect to add/remove class to nav when scrolling
   useEffect(() => {
     const nav = navRef.current;
 
@@ -31,6 +32,7 @@ const Navbar = () => {
     };
   }, []);
 
+  // Toggle the nav menu for mobile
   const toggleNaVMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -53,6 +55,9 @@ const Navbar = () => {
                   : `${styles.navItems}`
               }
             >
+              {/*********************************************************************
+               *                     LINKS
+               ********************************************************************/}
               <div className={styles.navListContainer}>
                 <nav className={styles.nav}>
                   <ul className={styles.navList}>
@@ -78,6 +83,8 @@ const Navbar = () => {
                 </nav>
               </div>
             </div>
+
+            {/* Mobile nav toggle */}
             <div className={styles.navIconContainer}>
               <img
                 src={showMenu ? `${navCross}` : `${navButton}`}
@@ -89,6 +96,9 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/*********************************************************************
+       *                     ROUTES
+       ********************************************************************/}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
