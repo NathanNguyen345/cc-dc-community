@@ -19,7 +19,8 @@ h2{
 
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     width: 100%;
 }
@@ -86,3 +87,23 @@ h2{
 .searchInputField{
     height: 30px;
 }
+
+@media (max-width: 767px) {
+    .cardContainer{
+        /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cardContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .cardContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }

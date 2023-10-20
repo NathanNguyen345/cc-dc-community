@@ -29,10 +29,6 @@
     flex-grow: 1;
 }
 
-.infoCardItem .desc{
-    flex-grow: 1;
-}
-
 .infoCard h3{
     font-size: 1rem;
     color: #4909C2;
@@ -47,7 +43,7 @@
 
 .infoCardTitle{
     display: flex;
-    height: 10%;
+    /* height: 10%; */
 }
 
 .infoCardBody{
@@ -58,7 +54,7 @@
 
 .infoCardFooter{
     display: flex;
-    height: 10%;
+    /* height: 10%; */
     justify-content: space-between;
 }
 
@@ -79,3 +75,17 @@
     margin: 5px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
 }
+
+@media (max-width: 767px) {
+    .itemDesc{
+        font-size: .6rem;
+        text-align: left;
+    }
+
+    .infoCardFooter{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        width: 100%;
+    }
+  }

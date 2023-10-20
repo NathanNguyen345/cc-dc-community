@@ -101,7 +101,7 @@
     {
         "id": "AdobeAcrobatSignLightningcomponentforSalesforce",
         "title": "Adobe Acrobat Sign Lightning component for Salesforce",
-        "desc": "An open-source alternative for the Adobe Acrobat Sign Lightning component for Salesforce. The purpose of this LWC is to provide a base for more advanced customization. It does require the Adobe Sign Appexchange package: https://appexchange.salesforce.com/appxListingDetail?listingId=a0N300000016ZmCEAU&tab=e. There are no other prerequisites.",
+        "desc": "An open-source alternative for the Adobe Acrobat Sign Lightning component for Salesforce. The purpose of this LWC is to provide a base for more advanced customization.",
         "featureType": "integration",
         "productType": ["Sign"],
         "adobeCertified": true,
@@ -115,5 +115,14 @@
         "productType": ["Sign"],
         "adobeCertified": true,
         "featureFileName": "AnchorTags"
+    },
+    {
+        "id": "CopyTemplateFields",
+        "title": "Copy Template Fields",
+        "desc": "Java-based command-line tool to copy fields from one template to another (ignoring document length)",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": "CopyTemplateFields"
     }
 ]

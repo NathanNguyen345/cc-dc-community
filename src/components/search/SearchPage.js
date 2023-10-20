@@ -24,7 +24,6 @@ const SearchPage = () => {
           `http://localhost:3000${process.env.PUBLIC_URL}/data/pages/searchToolsCollection.json`
         );
         const data = await response.json();
-
         const sortedData = [...data].sort((a, b) => {
           return a.id.localeCompare(b.id, undefined, { sensitivity: "base" });
         });
