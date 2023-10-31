@@ -9,120 +9,12 @@
         "featureFileName": "AcrobatSignAPITokenAuth"
     },
     {
-        "id": "SealOpacity",
-        "title": "Seal Opacity",
-        "desc": "How to create a repeatable action sequence within Photoshop to remove the white background and then save the resulting file as a transparent PDF",
-        "featureType": "sample",
-        "productType": ["Sign"],
-        "adobeCertified": false,
-        "featureFileName": "SealOpacity"
-    },
-    {
-        "id": "Bulkcreateseals",
-        "title": "Bulk create seals",
-        "desc": "How to repeatedly execute the action Create a new Electronic Seal from excel input",
-        "featureType": "sample",
-        "productType": ["Sign"],
-        "adobeCertified": false,
-        "featureFileName": "Bulkcreateseals"
-    },
-    {
-        "id": "PAFormdatacapture",
-        "title": "PA Form data capture",
-        "desc": "Send a copy of signed agreement to a recipient email configured in a web form",
-        "featureType": "sample",
-        "productType": ["Acrobat", "Sign"],
-        "adobeCertified": false,
-        "featureFileName": "PAFormdatacapture"
-    },
-    {
-        "id": "SigntoSignMigration",
-        "title": "Sign to Sign Migration",
-        "desc": "Many organisations have adopted electronic signature solutions to digitise and speed-up their processes. We commonly see organisations adopt e-signature solutions in the Finance, HR, Procurement, and Sales areas, but it has the potential to be a viable replacement for any paper-based process. This repository is designed to automate some of the tasks associated with switching from another supplier to Adobe, with the current focus on customers switching from DocuSign.",
-        "featureType": "tool",
-        "productType": ["Acrobat", "Sign"],
-        "adobeCertified": [true, false],
-        "featureFileName": "SigntoSignMigration"
-    },
-    {
-        "id": "CEMT",
-        "title": "CEMT",
-        "desc": "CEMT building blocks, HTML files used to create Custom Email Templates",
-        "featureType": "sample",
-        "productType": ["Acrobat", "Sign"],
-        "adobeCertified": true,
-        "featureFileName": "CEMT"
-    },
-    {
-        "id": "TextTagKitchenSink",
-        "title": "Text Tag Kitchen Sink",
-        "desc": "Text Tag Kitchen Sink to provide a playground and sample tags with appropriate syntax for customers to utilize",
-        "featureType": "tool",
-        "productType": ["Acrobat", "Sign"],
-        "adobeCertified": true,
-        "featureFileName": "TextTagKitchenSink"
-    },
-    {
-        "id": "AcrobatSignBulkOperationsTool",
-        "title": "Acrobat Sign Bulk Operations Tool",
-        "desc": "The Acrobat Sign Bulk Operations Tool is a comprehensive application designed to facilitate the efficient handling of bulk operations for Account/Group admins. With this tool, users can effortlessly perform tasks such as deleting agreements, downloading agreements and form fields, and hiding all agreements. The tool is specifically tailored for Account/Group admins, offering streamlined processes for managing agreements at scale.",
-        "featureType": "tool",
-        "productType": ["Sign"],
-        "adobeCertified": true,
-        "featureFileName": "AcrobatSignBulkOperationsTool"
-    },
-    {
-        "id": "AcrobatSignDocGenAPIsIntegration",
-        "title": "Acrobat Sign DocGen APIs Integration",
-        "desc": "A sample web application has been created to showcase the integration of Document Generation - PDF services and Acrobat Sign.",
-        "featureType": "tool",
-        "productType": ["Acrobat"],
-        "adobeCertified": true,
-        "featureFileName": "AcrobatSignDocGenAPIsIntegration"
-    },
-    {
-        "id": "Dynamicworkflowtool",
-        "title": "Dynamic workflow tool",
-        "desc": "Dynamic workflows allow users to specify the next participants within an agreement.",
-        "featureType": "tool",
-        "productType": ["Sign"],
-        "adobeCertified": true,
-        "featureFileName": "Dynamicworkflowtool"
-    },
-    {
-        "id": "AcrobatSignRedliningWorkflowSample",
-        "title": "Acrobat Sign Redlining Workflow Sample",
-        "desc": "N/A",
-        "featureType": "sample",
-        "productType": ["Sign"],
-        "adobeCertified": true,
-        "featureFileName": "AcrobatSignRedliningWorkflowSample"
-    },
-    {
-        "id": "AdobeAcrobatSignLightningcomponentforSalesforce",
-        "title": "Adobe Acrobat Sign Lightning component for Salesforce",
-        "desc": "An open-source alternative for the Adobe Acrobat Sign Lightning component for Salesforce. The purpose of this LWC is to provide a base for more advanced customization.",
-        "featureType": "integration",
-        "productType": ["Sign"],
-        "adobeCertified": true,
-        "featureFileName": "AdobeAcrobatSignLightningcomponentforSalesforce"
-    },
-    {
-        "id": "AnchorTags",
-        "title": "Anchor Tags",
-        "desc": "Anchor Tags",
-        "featureType": "sample",
-        "productType": ["Sign"],
-        "adobeCertified": true,
-        "featureFileName": "AnchorTags"
-    },
-    {
-        "id": "CopyTemplateFields",
-        "title": "Copy Template Fields",
-        "desc": "Java-based command-line tool to copy fields from one template to another (ignoring document length)",
+        "id": "SignToSignMigration",
+        "title": "Sign to Sign Template Migration Tool",
+        "desc": "A tool to assist with migration templates from one Sign account to another. Supports cross-shard commercial account migration, commercial to Sign For Gov and developer account to either commercial or Gov. ",
         "featureType": "tool",
         "productType": ["Sign"],
         "adobeCertified": false,
-        "featureFileName": "CopyTemplateFields"
+        "featureFileName": "SignToSignMigration"
     }
 ]

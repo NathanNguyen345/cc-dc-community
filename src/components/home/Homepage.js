@@ -181,7 +181,7 @@ const Homepage = () => {
             >
               <Link to="/search">
                 <KeyFeatureCard
-                  title={"Sample"}
+                  title={"Samples"}
                   desc={
                     "Collection of Document Cloud code samples, examples, and templates"
                   }
