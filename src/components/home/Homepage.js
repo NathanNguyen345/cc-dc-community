@@ -167,7 +167,7 @@ const Homepage = () => {
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <Link to="/integrations">
+              <Link to="https://helpx.adobe.com/sign/integrations/home.html" target="_blank">
                 <KeyFeatureCard
                   title={"Integrations"}
                   desc={"Document Cloud integrations to accelerate deployment."}
@@ -179,7 +179,7 @@ const Homepage = () => {
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <Link to="/samples">
+              <Link to="/search">
                 <KeyFeatureCard
                   title={"Sample"}
                   desc={
@@ -193,7 +193,7 @@ const Homepage = () => {
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <Link to="/tools">
+              <Link to="/search">
                 <KeyFeatureCard
                   title={"Tool"}
                   desc={
