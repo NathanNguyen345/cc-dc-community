@@ -83,17 +83,17 @@ const Navbar = () => {
                     <li>
                       <Link to="/">Home</Link>
                     </li>
+                    {/*<li>*/}
+                    {/*  <Link to="/integrations">Integrations</Link>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*  <Link to="/samples">Samples</Link>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*  <Link to="/tools">Tools</Link>*/}
+                    {/*</li>*/}
                     <li>
-                      <Link to="/integrations">Integrations</Link>
-                    </li>
-                    <li>
-                      <Link to="/samples">Samples</Link>
-                    </li>
-                    <li>
-                      <Link to="/tools">Tools</Link>
-                    </li>
-                    <li>
-                      <Link to="/search">Search</Link>
+                      <Link to="/search">Tools</Link>
                     </li>
                     <li>
                       <Link to="/contact">Contact Us</Link>
