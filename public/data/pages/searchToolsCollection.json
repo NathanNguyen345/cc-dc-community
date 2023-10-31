@@ -1,12 +1,12 @@
 [
     {
-        "id": "AuditLogSearch",
-        "title": "Audit Log Search",
-        "desc": "Educational DC Building Blocks: Well-Commented Code Samples for Enlightening DC Developers. Accelerate Your Implementation with Structural Skeletons and Empower Your Own Solutions!",
-        "featureType": "integration",
+        "id": "PowerAutomateSamples",
+        "title": "Power Automate Samples",
+        "desc": "A set of sample flows for Power Automate to help you get started with common use cases",
+        "featureType": "sample",
         "productType": ["Sign"],
         "adobeCertified": false,
-        "featureFileName": "AcrobatSignAPITokenAuth"
+        "featureFileName": "PowerAutomateSamples"
     },
     {
         "id": "SignToSignMigration",
