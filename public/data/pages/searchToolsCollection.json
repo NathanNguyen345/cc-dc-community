@@ -16,5 +16,32 @@
         "productType": ["Sign"],
         "adobeCertified": false,
         "featureFileName": "SignToSignMigration"
+    },
+    {
+        "id": "dc-sign-list-templates",
+        "title": "Acrobat Sign List Templates",
+        "desc": "Java-based command-line tool to list all the library templates in an Acrobat Sign account (in CSV format)",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": "dc-sign-list-templates"
+    },
+    {
+        "id": "dc-sign-list-webforms",
+        "title": "Acrobat Sign List Web Forms",
+        "desc": "Java-based command-line tool to list all the web forms in an Acrobat Sign account (in CSV format)",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": "dc-sign-list-webforms"
+    },
+    {
+        "id": "dc-sign-list-workflows",
+        "title": "Acrobat Sign List Workflows",
+        "desc": "Java-based command-line tool to list all the custom workflows in an Acrobat Sign account (in CSV format)",
+        "featureType": "tool",
+        "productType": ["Sign"],
+        "adobeCertified": false,
+        "featureFileName": "dc-sign-list-workflows"
     }
 ]

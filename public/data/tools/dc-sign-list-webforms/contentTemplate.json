@@ -1,0 +1,40 @@
+{
+    "title": "Acrobat Sign List Web Forms",
+    "tagLine": "Obtain a list of all the web forms in your Acrobat Sign account",
+    "version": "2.0.0",
+    "creator": "Chris Hughes",
+    "keyFeature": [
+        {
+            "title": "List All Web Forms",
+            "desc": "Keep track of all the web forms that exist throughout your Acrobat Sign account"
+        },
+        {
+            "title": "Supports Sandbox Account",
+            "desc": "Use the optional --sandbox switch to use with Sandbox account"
+        },
+        {
+            "title": "Concise Output Format",
+            "desc": "Output is intentionally concise to easily support directing to a CSV file for further analysis"
+        }
+    ],
+    "content": [
+        {
+            "type": "text",
+            "content": "Java-based command-line tool to list all the web forms in an Acrobat Sign account (in CSV format)"
+        },
+        {
+            "type": "image",
+            "content": "example-usage.png"
+        }
+    ],
+    "installation": [
+        {
+            "type": "text",
+            "content": "Executable JAR provided, but can be built from source using Apache Maven"
+        },
+        {
+            "type": "link",
+            "content": "https://git.corp.adobe.com/sign-acs/dc-sign-list-webforms"
+        }
+    ]
+}
