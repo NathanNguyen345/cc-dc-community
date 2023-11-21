@@ -34,7 +34,7 @@
         },
         {
             "type": "link",
-            "content": "https://git.corp.adobe.com/sign-acs/dc-sign-list-workflows"
+            "content": "https://github.com/adobe/dc-sign-list-workflows"
         }
     ]
 }
