@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className={styles.navContent}>
             <div className={styles.navLeft}>
               <h1>
-                <span>ACS DC</span>
+                <span>Community Source Hub</span>
               </h1>
             </div>
 

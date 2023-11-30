@@ -42,7 +42,7 @@ const Footer = (color = "") => {
           </div>
 
           <div>
-            <p>ACS DC Community Software</p>
+            <p>Community Source Hub</p>
           </div>
         </footer>
       </div>

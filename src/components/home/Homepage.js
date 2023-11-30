@@ -63,8 +63,8 @@ const Homepage = () => {
           >
             <div className={styles.title}>
               <h1>
-                <span>Empowering Success:</span> Unleash Your ACS/DC Potential
-                with Our All-in-One Solution
+                <span>Empowering Success:</span> Unlock Your Full Potential with
+                Community Source Hub's Solutions
               </h1>
             </div>
             <div className={styles.desc}>
@@ -167,7 +167,10 @@ const Homepage = () => {
             <div
               className={isInView3 ? `${styles.itemEnter}` : `${styles.item}`}
             >
-              <Link to="https://helpx.adobe.com/sign/integrations/home.html" target="_blank">
+              <Link
+                to="https://helpx.adobe.com/sign/integrations/home.html"
+                target="_blank"
+              >
                 <KeyFeatureCard
                   title={"Integrations"}
                   desc={"Document Cloud integrations to accelerate deployment."}
@@ -228,7 +231,7 @@ const Homepage = () => {
               <p>
                 We specialize in developing custom solutions for Adobe products,
                 including Adobe Document Cloud. With expertise in applications
-                like Acrobat, Acrobat Sign, Acrobat Services, and Scan, we
+                like Acrobat, Acrobat Sign, Power Automate, and many more. We
                 transform document management and streamline workflows to
                 empower your productivity. Please note that the the Document
                 Cloud developer community maintains this repository.
