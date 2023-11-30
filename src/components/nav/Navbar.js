@@ -96,7 +96,7 @@ const Navbar = () => {
                       <Link to="/search">Tools</Link>
                     </li>
                     <li>
-                      <Link to="/contributions">Contributions</Link>
+                      <Link to="/contact">Contributions</Link>
                     </li>
                   </ul>
                 </nav>
