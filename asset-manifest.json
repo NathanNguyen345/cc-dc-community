@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/cc-dc-community/static/css/main.5e85d058.css",
-    "main.js": "/cc-dc-community/static/js/main.3a55cced.js",
+    "main.css": "/cc-dc-community/static/css/main.3a3161ad.css",
+    "main.js": "/cc-dc-community/static/js/main.30fc31ca.js",
     "static/js/787.c4e7f8f9.chunk.js": "/cc-dc-community/static/js/787.c4e7f8f9.chunk.js",
     "static/media/testImg.svg": "/cc-dc-community/static/media/testImg.340442b0702c180d4a10.svg",
     "static/media/aboutImg.png": "/cc-dc-community/static/media/aboutImg.c53f7aacbb3ddf1f7146.png",
     "static/media/spotlightImg.png": "/cc-dc-community/static/media/spotlightImg.805faac76ec10ee5f7b1.png",
-    "static/media/ContactImg.png": "/cc-dc-community/static/media/ContactImg.38c16d2087233ecafd25.png",
     "static/media/splashImg.png": "/cc-dc-community/static/media/splashImg.12d91a33beca1cc87189.png",
     "static/media/AcrobatLogo.png": "/cc-dc-community/static/media/AcrobatLogo.83ae048790f748d69832.png",
     "static/media/AdobeLogo.png": "/cc-dc-community/static/media/AdobeLogo.90ea8b44ff8abd035601.png",
@@ -15,12 +14,12 @@
     "index.html": "/cc-dc-community/index.html",
     "static/media/featureTopWave.svg": "/cc-dc-community/static/media/featureTopWave.e6a96a014ccc206b1971.svg",
     "static/media/featureBottomWave.svg": "/cc-dc-community/static/media/featureBottomWave.c8efbfda5c5b709a1378.svg",
-    "main.5e85d058.css.map": "/cc-dc-community/static/css/main.5e85d058.css.map",
-    "main.3a55cced.js.map": "/cc-dc-community/static/js/main.3a55cced.js.map",
+    "main.3a3161ad.css.map": "/cc-dc-community/static/css/main.3a3161ad.css.map",
+    "main.30fc31ca.js.map": "/cc-dc-community/static/js/main.30fc31ca.js.map",
     "787.c4e7f8f9.chunk.js.map": "/cc-dc-community/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e85d058.css",
-    "static/js/main.3a55cced.js"
+    "static/css/main.3a3161ad.css",
+    "static/js/main.30fc31ca.js"
   ]
 }
