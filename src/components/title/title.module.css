@@ -1,0 +1,21 @@
+/*****************************************************
+                TITLE STYLES  
+*****************************************************/
+.titleContainerShow{
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.titleContanerHide{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.title h1{
+    color: white
+}
+
+.desc{
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,108 @@
+/*****************************************************
+                FEATURE INFO STYLES  
+*****************************************************/
+.featureInfoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
+
+.featureInfoContainer h1{
+    color: black !important;
+}
+
+.featureInfoContainer a{
+    color: black !important;
+    text-decoration: underline;
+}
+
+.featureInfoTextContent{
+    width: 100%;
+    display: flex;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.featureInfoTextContent pre{
+    color: black !important;
+    font-family: "forma-djr-cyrillic-deck", sans-serif;
+    font-size: 1.25rem;
+    white-space: pre-wrap;
+}
+
+.featureInfoImageContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.featureInfoLinkContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.featureInfoImageContent img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+.featureBulletPoints{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.bulletItem{
+    flex: 1;
+}
+
+.featureInfoContentSection{
+    display: flex;
+    justify-content: center;
+    background-color: #F7F7F7;
+    width: 100vw;
+}
+
+.featureInfoContentSection h2{
+    color: #56BDDF;
+    font-size: 2rem;
+}
+
+.featureInfoInstallSection{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(86, 189, 223, 0.3);
+    width: 100vw;
+}
+
+.featureInfoInstallSection h2{
+    color: #56BDDF;
+    font-size: 2rem;
+}
+
+.featureInfoContent{
+    margin-bottom: 100px;
+}
+
+.featureInfoContactSection{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.featureInfoContactSection h2{
+    color: #56BDDF;
+    font-size: 2rem;
+}

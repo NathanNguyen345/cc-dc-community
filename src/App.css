@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  font-family: "forma-djr-cyrillic-deck", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1473E6;
+  position: relative;
+  z-index: 0;
+}
+
+.paddingContainer{
+  width: 100vw;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  place-items: center;
+  overflow: hidden;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-top: 75px;
+}
+
+@media (max-width: 767px) {
+  .content{
+      width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content{
+      width: 80%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .content{
+      width: 70%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1619px) {
+  .content{
+      width: 80%;
+  }
+}
+
+@media (min-width: 1620px) and (max-width: 2559px){
+  .content{
+      width: 65%;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {  
+  .content{
+    width: 50%;
+}
+}
+
+
+@media (min-width: 3840px) {
+  .content{
+    width: 40%;
+}
+}

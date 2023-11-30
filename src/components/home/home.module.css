@@ -1,0 +1,354 @@
+/*****************************************************
+                HOMEPAGE GLOBAL STYLES  
+*****************************************************/
+span{
+    color: #FFC55A;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+p{
+    font-size: 1.25rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+
+img{
+    max-width: 450px;
+    max-height: 450px;
+}
+
+/*****************************************************
+                WAVE STYLES  
+*****************************************************/
+.svgTop{
+    background-image: url("../../assets/images/topWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.svgBottom{
+    background-image: url("../../assets/images/bottomWave.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+/*****************************************************
+                SPLASH STYLES
+*****************************************************/
+.splashContainer{
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    text-align: left;
+    grid-template-areas:
+        "section img";
+
+}
+
+.splashSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.splashImgFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.sectionFlexEnter{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.sectionImgFlexEnter{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.homeImgRight{
+    display: flex;
+    justify-content: right;
+}
+
+.homeImgLeft{
+    display: flex;
+    justify-content: left;
+}
+
+/*****************************************************
+                SPOTLIGHT STYLE
+*****************************************************/
+.spotlightContainer{
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    text-align: left;
+    grid-template-areas:
+        "img section"
+}
+
+.buttonRight{
+    margin-left: auto;
+}
+
+.spotlightSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.spotlightImgFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+
+
+/*****************************************************
+                KEY FEATURES STYLES
+*****************************************************/
+.keyfeatureContainer{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.keyfeatureContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.keyTitle{
+    margin-bottom: 20px;
+}
+
+.keyfeatureTitle{
+    text-align: center;
+    opacity: 0;
+}
+
+.keyfeatureTitleEnter{
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.item{
+    flex: 1;
+    grid-area: key1;
+    transform: translateY(75px);
+    opacity: 0;
+}
+
+.itemEnter{
+    flex: 1;
+    grid-area: key1;
+    transform: translateY(0px);
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+
+
+/*****************************************************
+                ABOUT STYLES
+*****************************************************/
+.aboutContainer{
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    text-align: left;
+    grid-template-areas:
+        "section img"
+}
+
+.aboutSectionFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+    transform: translateX(-200px);
+    opacity: 1;
+}
+
+.aboutImgFlex{
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+    transform: scaleX(-1);
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+/*****************************************************
+                CONTACT STYLES
+*****************************************************/
+.contactContainer{
+    padding: 50px;
+}
+
+.contactFlex{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.contactFlexEnter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0px);
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+
+.contactButton{
+    margin-top: 50px;
+}
+
+
+/*****************************************************
+                MEDIA QUERIES 
+*****************************************************/
+@media (max-width: 767px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: .75rem;
+    }
+    .homeImg{
+        display: none;
+    }
+
+    .homeImg{
+        visibility: visible;
+    }
+
+    .splashContainer{
+        display: block;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .spotlightContainer{
+        display: block;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .buttonRight{
+        margin: 0;
+    }
+
+    .keyfeatureContainer{
+        display: block;
+        margin: 75;
+    }
+
+    .keyfeatureContent{
+        flex-direction: column;
+    }
+
+    .aboutContainer{
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    .contactContainer{
+        padding: 0;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .contactButton{
+        margin-top: 20px;
+    }
+  }
+  
+@media (min-width: 768px) and (max-width: 1023px) {
+    img{
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+  
+    p{
+        font-size: 1rem;
+    }
+  }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+  
+    p{
+        font-size: 1rem;
+    }
+  }
+
+@media (min-width: 1280px) and (max-width: 1619px) {
+    img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+  }
+
+@media (min-width: 2560px) {  
+  }
+  
+
+@media (min-width: 3840px) {
+  }
