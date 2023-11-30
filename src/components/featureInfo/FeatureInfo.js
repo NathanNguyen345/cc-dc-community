@@ -35,7 +35,7 @@ const FeatureInfo = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/contentTemplate.json`
+          `${process.env.PUBLIC_URL}/data/tools/${fileName}/contentTemplate.json`
         );
         const data = await response.json();
         setContentData(data);
