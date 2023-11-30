@@ -142,7 +142,7 @@ const Navbar = () => {
           path="/search/:featureName"
           element={<BackgroundLayout color="Features" type="features" />}
         />
-        <Route path="/contributions" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </HashRouter>
   );
