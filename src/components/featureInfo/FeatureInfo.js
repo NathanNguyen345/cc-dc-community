@@ -92,7 +92,7 @@ const FeatureInfo = () => {
         renderedContent = (
           <div key={index} className={styles.featureInfoImageContent}>
             <img
-              src={`http://localhost:3000${process.env.PUBLIC_URL}/data/tools/${fileName}/images/${item.content}`}
+              src={`${process.env.PUBLIC_URL}/data/tools/${fileName}/images/${item.content}`}
               alt=""
             />
           </div>
