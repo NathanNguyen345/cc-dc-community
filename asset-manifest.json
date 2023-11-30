@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/pages/nnguyen/acs-dc-community/static/css/main.7f6f0799.css",
+    "main.js": "/pages/nnguyen/acs-dc-community/static/js/main.9b856ab3.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/pages/nnguyen/acs-dc-community/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/testImg.svg": "/pages/nnguyen/acs-dc-community/static/media/testImg.340442b0702c180d4a10.svg",
+    "static/media/aboutImg.png": "/pages/nnguyen/acs-dc-community/static/media/aboutImg.c53f7aacbb3ddf1f7146.png",
+    "static/media/spotlightImg.png": "/pages/nnguyen/acs-dc-community/static/media/spotlightImg.805faac76ec10ee5f7b1.png",
+    "static/media/ContactImg.png": "/pages/nnguyen/acs-dc-community/static/media/ContactImg.38c16d2087233ecafd25.png",
+    "static/media/splashImg.png": "/pages/nnguyen/acs-dc-community/static/media/splashImg.12d91a33beca1cc87189.png",
+    "static/media/AcrobatLogo.png": "/pages/nnguyen/acs-dc-community/static/media/AcrobatLogo.83ae048790f748d69832.png",
+    "static/media/AdobeLogo.png": "/pages/nnguyen/acs-dc-community/static/media/AdobeLogo.90ea8b44ff8abd035601.png",
+    "static/media/topWave.svg": "/pages/nnguyen/acs-dc-community/static/media/topWave.ff942f4a005edc73482c.svg",
+    "static/media/bottomWave.svg": "/pages/nnguyen/acs-dc-community/static/media/bottomWave.7f05b7411d5dfdc93f0a.svg",
+    "index.html": "/pages/nnguyen/acs-dc-community/index.html",
+    "static/media/featureTopWave.svg": "/pages/nnguyen/acs-dc-community/static/media/featureTopWave.e6a96a014ccc206b1971.svg",
+    "static/media/featureBottomWave.svg": "/pages/nnguyen/acs-dc-community/static/media/featureBottomWave.c8efbfda5c5b709a1378.svg",
+    "main.7f6f0799.css.map": "/pages/nnguyen/acs-dc-community/static/css/main.7f6f0799.css.map",
+    "main.9b856ab3.js.map": "/pages/nnguyen/acs-dc-community/static/js/main.9b856ab3.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/pages/nnguyen/acs-dc-community/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f6f0799.css",
+    "static/js/main.9b856ab3.js"
+  ]
+}
