@@ -1,53 +1,75 @@
 /*****************************************************
                 CONTACT PAGE STYLES  
 *****************************************************/
-.contactContent{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    color: #343434;
-    justify-content: center;
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+  color: white;
+  justify-content: center;
 }
 
-.contactImg{
-    width: 700px;
-    height: 700px;
+.contactContent h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.imgContainer h2{
-    font-size: 100px;
-    color: white;
+.contactContent h2 {
+  font-size: 1.75rem;
+  color: #ffc55a;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.contactMessageContainer{
-    display: flex;
-    height: 100%;
+.contactContent p {
+  font-size: 1.25rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.descContainer strong {
+  color: #ffc55a;
+  font-size: 1.25rem;
+}
+
+.descContainer li {
+  font-size: 1.5rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  list-style: none;
 }
 
 /*****************************************************
                 WAVE STYLES  
 *****************************************************/
-.svgTop{
-    background-image: url("../../assets/images/topWave.svg");
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
+.svgTop {
+  background-image: url("../../assets/images/topWave.svg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
-.svgBottom{
-    background-image: url("../../assets/images/bottomWave.svg");
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -2;
+.svgBottom {
+  background-image: url("../../assets/images/bottomWave.svg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
 }

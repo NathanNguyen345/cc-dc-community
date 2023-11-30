@@ -263,10 +263,12 @@ const Homepage = () => {
             }
           >
             <h1>
-              Have Questions? <span>Contact</span> Us for Expert Assistance!
+              Like to <span>Contribute?</span> We'd Love to Hear From You!
             </h1>
             <div className={styles.contactButton}>
-              <Button text="Contact Us" />
+              <Link to="/contact">
+                <Button text="Contribute Today" />
+              </Link>
             </div>
           </div>
         </div>
