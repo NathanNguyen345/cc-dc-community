@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 # cc-dc-community
+
 =======
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -79,4 +80,3 @@ Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING
 ### Licensing
 
 This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
->>>>>>> upstream/content-updates
