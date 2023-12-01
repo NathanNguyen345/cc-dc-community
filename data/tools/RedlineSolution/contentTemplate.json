@@ -1,0 +1,120 @@
+{
+  "title": "Readlining Solution",
+  "tagLine": "Allows for workflows to be triggered within Acrobat Sign to initiate document redlining for contract negotiations  ",
+  "version": "1.0",
+  "creator": "Yashar Avram",
+  "keyFeature": [
+    {
+      "title": "Feature Highlight 1",
+      "desc": "Feature Highlight 1 Description"
+    },
+    {
+      "title": "Feature Highlight 2",
+      "desc": "Feature Highlight 2 Description"
+    },
+    {
+      "title": "Feature Highlight 3",
+      "desc": "Feature Highlight 3 Description"
+    }
+  ],
+  "content": [
+    {
+      "type": "text",
+      "content": "Navigate to https://make.powerautomate.com/solutions and select `Import Solution`"
+    },
+    {
+      "type": "image",
+      "content": "image1.png"
+    },
+    {
+      "type": "image",
+      "content": "image2.png"
+    },
+    {
+      "type": "text",
+      "content": "Select the DocumentRedlining zip file\nSelect each connection required. If there you don't have a configured connection you may be required to set it up before proceeding to the next step."
+    },
+    {
+      "type": "image",
+      "content": "image3.png"
+    },
+    {
+      "type": "text",
+      "content": "If you don't have PDF Services API setup navigate to https://www.adobe.com/go/powerautomate_getstarted to create the required DC API credentials for the Document Generation step."
+    },
+    {
+      "type": "image",
+      "content": "image4.png"
+    },
+    {
+      "type": "image",
+      "content": "image5.png"
+    },
+    {
+      "type": "text",
+      "content": "In SharePoint Create a folder called `Redlining` or something similar. Open the folder and Create another folder used to store the documents you are redlining called `Redlining Files` then upload the NDA Template in the same location."
+    },
+    {
+      "type": "image",
+      "content": "image6.png"
+    },
+    {
+      "type": "text",
+      "content": "Navigate to your SharePoint site and locate the path for your new folders and template file. Input these into the corresponding environment variables."
+    },
+    {
+      "type": "image",
+      "content": "image7.png"
+    },
+    {
+      "type": "text",
+      "content": "The import may take a few minutes. Once imported open the PowerAutomate Flow"
+    },
+    {
+      "type": "image",
+      "content": "image8.png"
+    },
+    {
+      "type": "text",
+      "content": "Navigate to `Create sharing link for a file or folder` and select your library name and save"
+    },
+    {
+      "type": "image",
+      "content": "image9.png"
+    },
+    {
+      "type": "text",
+      "content": "Now test flow by logging into Acrobat Sign and selecting the Power Automate Workflow\nStart from Library > Power Automate > select `Document Redlining` > Click Start"
+    },
+    {
+      "type": "image",
+      "content": "image10.png"
+    },
+    {
+      "type": "text",
+      "content": "Enter all required fields and click `Run Flow`"
+    },
+    {
+      "type": "image",
+      "content": "image11.png"
+    }
+  ],
+  "installation": [
+    {
+      "type": "text",
+      "content": "To download the Solution export file please use the link below:"
+    },
+    {
+      "type": "link",
+      "content": "https://acrobat.adobe.com/id/urn:aaid:sc:US:4ac3bd38-4e3a-4c94-8f64-f1a6d09d583b"
+    },
+    {
+      "type": "text",
+      "content": "You will also need the NDA tempalte file. Please use the link below to download the file:"
+    },
+    {
+      "type": "link",
+      "content": "https://acrobat.adobe.com/id/urn:aaid:sc:US:52c4d1ac-ee64-45f0-af29-70e6a1c67224"
+    }
+  ]
+}
