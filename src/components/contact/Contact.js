@@ -17,11 +17,19 @@
 
  *************************************************************************
  */
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./contact.module.css";
 import Footer from "../footer/Footer";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+  const location = useLocation();
+
+  // Scroll to top of page when page is loaded
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="container">
       <div className={styles.contactSection}>
