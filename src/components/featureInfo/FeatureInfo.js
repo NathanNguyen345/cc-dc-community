@@ -123,8 +123,11 @@ const FeatureInfo = () => {
         <div className={styles.featureInfoContactSection}>
           <div className={`content ${styles.featureInfoContent}`}>
             <div className={styles.featureCallToAction}>
-              <h2>Have Questions? Contact Us for Expert Assistance!</h2>
-              <Button text="Contact Us" color="teal" />
+              <h2>
+                Have Questions? Contact Your Customer Success Manager For More
+                Information!
+              </h2>
+              {/* <Button text="Contact Us" color="teal" /> */}
             </div>
           </div>
         </div>

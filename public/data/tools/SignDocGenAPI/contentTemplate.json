@@ -1,0 +1,44 @@
+{
+  "title": "Acrobat Sign DocGen APIs Integration",
+  "tagLine": "This application is developed showcase the integration of Document Generation - PDF services and Acrobat Sign. The application can be re-used for development/integration with other web applications.",
+  "version": "1.0",
+  "creator": "Abhishek Dixit",
+  "keyFeature": [
+    {
+      "title": "Combined PDF",
+      "desc": "Use PDF Services Combine PDF API to comibine multiple documents."
+    },
+    {
+      "title": "Re-arrange pages in PDF",
+      "desc": "Rearrange API to move pages in PDF"
+    },
+    {
+      "title": "Generate PDF from word template.",
+      "desc": "Use of Document Generation API"
+    }
+  ],
+  "content": [
+    {
+      "type": "text",
+      "content": "A sample web application has been created to showcase the integration of Document Generation - PDF services and Acrobat Sign."
+    },
+    {
+      "type": "text",
+      "content": "Use Case\nThis application is developed showcase the integration of Document Generation - PDF services and Acrobat Sign. The application can be re-used for development/integration with other web applications."
+    },
+    {
+      "type": "text",
+      "content": "Customer problem to be solved\n\t- Combine PDF.\n\t- Re-arrange pages in PDF\n\t- Generate PDF from word template\n\t- Generate PDF from word template and send for signature.\n\t- Send for signature"
+    }
+  ],
+  "installation": [
+    {
+      "type": "text",
+      "content": "If you would like to find out more about this tool, please check out the Github repository below:"
+    },
+    {
+      "type": "link",
+      "content": "https://github.com/abhishekdixitadobe/docsigning#readme"
+    }
+  ]
+}
